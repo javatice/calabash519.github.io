@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2017-07-14T15:07:05.635Z</updated>
+  <updated>2017-07-14T12:24:08.088Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -14,20 +14,6 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
-  
-  <entry>
-    <title></title>
-    <link href="http://yoursite.com/2017/07/14/Echarts-map/"/>
-    <id>http://yoursite.com/2017/07/14/Echarts-map/</id>
-    <published>2017-07-14T13:31:03.191Z</published>
-    <updated>2017-07-14T15:07:05.635Z</updated>
-    
-    <summary type="html">
-    
-    </summary>
-    
-    
-  </entry>
   
   <entry>
     <title>四百里</title>
@@ -124,6 +110,40 @@
     </summary>
     
       <category term="随笔" scheme="http://yoursite.com/categories/%E9%9A%8F%E7%AC%94/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Echarts初体验</title>
+    <link href="http://yoursite.com/2017/03/14/Echarts-map/"/>
+    <id>http://yoursite.com/2017/03/14/Echarts-map/</id>
+    <published>2017-03-14T13:31:03.000Z</published>
+    <updated>2017-07-14T15:07:05.651Z</updated>
+    
+    <content type="html"><![CDATA[<p>因为公司业务需求，前些阵子接触到了<a href="http://echarts.baidu.com/" target="_blank" rel="external">Echarts</a>，百度旗下开源的一个图标库，底层依赖 Canvas 类库 <a href="https://github.com/ecomfe/zrender" target="_blank" rel="external">ZRender</a>，其高度可个性化定制的数据可视化图表用来做数据分析，图形展示再合适不过，而且相对于D3陡峭的学习曲线，Echarts对于初学者更加友好，API随拿随用，强烈安利，毕竟熊厂难得有这么良心的作品。<a id="more"></a></p>
+<p><img src="https://calabash519.github.io/my-picture/Echarts.png" alt="Echarts"></p>
+<p>在Echarts官网，有完备的教程和对应的<a href="http://echarts.baidu.com/api.html#echarts" target="_blank" rel="external">API</a>，还有由各种图表组成的画廊，在那里你可以找到你想要的模板或者你也可以根据翻阅其API来拓展和自定义自己的需求。</p>
+<p><img src="https://calabash519.github.io/my-picture/gallary.png" alt=" gallery"></p>
+<p>我自己也根据官网的API和gallery的图表修改自制定实现了几个图表包括地图和折线图，饼图，柱状图等。</p>
+<ul>
+<li>病人指标折线图</li>
+</ul>
+<p><img src="https://calabash519.github.io/my-picture/line.png" alt="line"></p>
+<ul>
+<li>航班流向检测图</li>
+</ul>
+<p><img src="https://calabash519.github.io/my-picture/air.png" alt="air"></p>
+<p>目前开源的可视化图表库有D3.js,highcharts,Echarts,不过最后一比较的话，个人还是觉得Echarts比较好，毕竟炫酷又容易上手，D3上手太花时间了，hightcharts的话太过简洁，动画效果也没有Echarts做的漂亮，最后，希望百度能够坚持把Echarts越做越好吧。</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;因为公司业务需求，前些阵子接触到了&lt;a href=&quot;http://echarts.baidu.com/&quot;&gt;Echarts&lt;/a&gt;，百度旗下开源的一个图标库，底层依赖 Canvas 类库 &lt;a href=&quot;https://github.com/ecomfe/zrender&quot;&gt;ZRender&lt;/a&gt;，其高度可个性化定制的数据可视化图表用来做数据分析，图形展示再合适不过，而且相对于D3陡峭的学习曲线，Echarts对于初学者更加友好，API随拿随用，强烈安利，毕竟熊厂难得有这么良心的作品。
+    
+    </summary>
+    
+      <category term="Echarts" scheme="http://yoursite.com/categories/Echarts/"/>
     
     
   </entry>
