@@ -56,7 +56,7 @@
     <link href="http://yoursite.com/2017/04/25/unique-array/"/>
     <id>http://yoursite.com/2017/04/25/unique-array/</id>
     <published>2017-04-25T12:05:22.000Z</published>
-    <updated>2017-07-14T12:29:09.872Z</updated>
+    <updated>2017-07-14T12:32:53.817Z</updated>
     
     <content type="html"><![CDATA[<p>面试中对数组的考察，工作中对于数组的利用已经是家常便饭，而数组去重也是一个老生常谈的话题，接下来谈下我对于数组去重常用的三种思路。<a id="more"></a></p>
 <p>第一种：</p>
@@ -81,7 +81,7 @@
     
     </summary>
     
-      <category term="随笔" scheme="http://yoursite.com/categories/%E9%9A%8F%E7%AC%94/"/>
+      <category term="前端" scheme="http://yoursite.com/categories/%E5%89%8D%E7%AB%AF/"/>
     
     
   </entry>
