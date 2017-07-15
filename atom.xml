@@ -51,7 +51,7 @@
     <link href="http://yoursite.com/2017/06/05/lalala/"/>
     <id>http://yoursite.com/2017/06/05/lalala/</id>
     <published>2017-06-05T01:55:36.000Z</published>
-    <updated>2017-07-14T12:24:08.088Z</updated>
+    <updated>2017-07-15T18:08:48.833Z</updated>
     
     <content type="html"><![CDATA[<center><font>今日芒种</font></center><br><center><font>窗外风骤起</font></center><br><center><font>有人安然入梦</font></center><br><center><font>有人辗转，分秒皆凌迟</font></center>]]></content>
     
@@ -67,13 +67,49 @@
   </entry>
   
   <entry>
+    <title>MongoDB可视化工具之RoboMongo</title>
+    <link href="http://yoursite.com/2017/05/15/mongodb-and-robomango/"/>
+    <id>http://yoursite.com/2017/05/15/mongodb-and-robomango/</id>
+    <published>2017-05-15T01:55:36.000Z</published>
+    <updated>2017-07-15T18:08:45.988Z</updated>
+    
+    <content type="html"><![CDATA[<p>每个前端的心里都少不了一个全栈的梦，最近在折腾node，所以少不了数据库的操作，由于以前对于数据库接触也比较少，所以开始学习MongoDB多少有点忐忑，不过开始了以后才发现，原来非关系型数据库大哥MongoDB也挺好学的啊，不过总是用MongoDB shell中总是觉得麻烦也不直观，所以想着找一个MongoDB的可视化工具用用，后来找到了RoboMongo，这名字听起来怪怪的，不过用起来才发现，真还挺好用。</p>
+<p>想学MongoDB的话，基本的安装跟shell操作应该是不用多说，网上的文档教程太多，用点心总是能够弄好的。MongoDB的下载地址：<a href="https://www.mongodb.com/，RoboMongo的下载地址：https://robomongo.org/" target="_blank" rel="external">https://www.mongodb.com/，RoboMongo的下载地址：https://robomongo.org/</a></p>
+<p>下载安装好了以后通过管理员身份打开控制台，启动MongoDB</p>
+<p><img src="https://calabash519.github.io/my-picture/shell.png" alt="shell"></p>
+<p>然后打开RoboMongo，连接上MongoDB，下面就可以开始愉快的右键创建数据库，集合和文档：</p>
+<p><img src="https://calabash519.github.io/my-picture/robo.png" alt="robo"></p>
+<p>集合类似于关系型数据库中的表，而文档类似于关系型数据库中的行，集合是无模式的，所以也就意味着集合可以由各种各样的文档组成（心疼管理员一秒），其实将文档整理分开在特定的集合中可以更好地索引，但是MongoDB就是没有强制要求（傲娇），这也说明了MongoDB的灵活性不是吗？</p>
+<p>通过命令行（卧槽，有可视化工具谁还用命令行，不过多用shell可以更熟练）或者是RoboMongo创建新的文档：</p>
+<p>手动创建了一个叫做test的数据库和一个叫做myblog的集合，然后插入文档（个人还是比较喜欢在RoboMongo操作，感觉简直不要太好用啊），如下图所示：</p>
+<p><img src="https://calabash519.github.io/my-picture/insert.png" alt="insert"></p>
+<p>可以看到的是，其实其代码高亮也是比较漂亮的（虽然界面做的比较丑），然后就是你可以在上面的小栏那里进行增删改查，完了F5就可以看到你想要的结果，具体MongoDB操作请看下面链接：</p>
+<p><a href="https://github.com/StevenSLXie/Tutorials-for-Web-Developers/blob/master/MongoDB%20%E6%9E%81%E7%AE%80%E5%AE%9E%E8%B7%B5%E5%85%A5%E9%97%A8.md" target="_blank" rel="external">MongDB 极简实践入门</a></p>
+<p><a href="http://wiki.jikexueyuan.com/project/mongodb/" target="_blank" rel="external">MongDB教程</a></p>
+<p><a href="https://book.douban.com/subject/6068947/" target="_blank" rel="external">MongDB权威指南1</a></p>
+<p><a href="https://book.douban.com/subject/25798102/" target="_blank" rel="external">MongDB权威指南2</a></p>
+<p>说到底你会用MongoDB shell的话就会用RoboMongo，个人觉得RoboMongo还更加的直观跟方便，MongDB以JSON的形式展示数据显然对于web开发者来说更加友好，配合node使用也是不错，最后，希望RoboMongo好好做下界面，求你们了。</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;每个前端的心里都少不了一个全栈的梦，最近在折腾node，所以少不了数据库的操作，由于以前对于数据库接触也比较少，所以开始学习MongoDB多少有点忐忑，不过开始了以后才发现，原来非关系型数据库大哥MongoDB也挺好学的啊，不过总是用MongoDB shell中总是觉得麻烦
+    
+    </summary>
+    
+      <category term="MongDB" scheme="http://yoursite.com/categories/MongDB/"/>
+    
+    
+  </entry>
+  
+  <entry>
     <title>JavaScript数组去重</title>
     <link href="http://yoursite.com/2017/04/25/unique-array/"/>
     <id>http://yoursite.com/2017/04/25/unique-array/</id>
     <published>2017-04-25T12:05:22.000Z</published>
-    <updated>2017-07-14T14:20:19.420Z</updated>
+    <updated>2017-07-15T18:09:15.828Z</updated>
     
-    <content type="html"><![CDATA[<p>面试中对数组的考察，工作中对于数组的利用已经是家常便饭，而数组去重也是一个老生常谈的话题，接下来谈下我对于数组去重常用的三种思路。<a id="more"></a></p>
+    <content type="html"><![CDATA[<p>面试中对数组的考察，工作中对于数组的利用已经是家常便饭，而数组去重也是一个老生常谈的话题，接下来谈下我对于数组去重常用的三种思路。</p>
 <p>第一种：</p>
 <ol>
 <li>定义一个新的数组，准备存放已知数组的元素</li>
@@ -92,7 +128,11 @@
     
     <summary type="html">
     
-      &lt;p&gt;面试中对数组的考察，工作中对于数组的利用已经是家常便饭，而数组去重也是一个老生常谈的话题，接下来谈下我对于数组去重常用的三种思路。
+      &lt;p&gt;面试中对数组的考察，工作中对于数组的利用已经是家常便饭，而数组去重也是一个老生常谈的话题，接下来谈下我对于数组去重常用的三种思路。&lt;/p&gt;
+&lt;p&gt;第一种：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;定义一个新的数组，准备存放已知数组的元素&lt;/li&gt;
+&lt;li&gt;判断元素是否存在于新的数组中，不
     
     </summary>
     
@@ -106,15 +146,15 @@
     <link href="http://yoursite.com/2017/04/23/my-first-blog/"/>
     <id>http://yoursite.com/2017/04/23/my-first-blog/</id>
     <published>2017-04-23T09:05:22.000Z</published>
-    <updated>2017-07-14T14:57:14.952Z</updated>
+    <updated>2017-07-15T18:08:39.327Z</updated>
     
-    <content type="html"><![CDATA[<p>&emsp;&emsp;去年七月到如今的四月，十个月，一切好似梦一场，一路的孤独，迷茫，绝望以及成长，感觉都历历在目，而最后自己还是亲手将自己送回原点，逼自己重新开始。<a id="more"></a><br>&emsp;&emsp;十个月感觉自己的经历好似太多，也给自己带来很大的改变。七八九月在咸宁留校学习通宵达旦，十月武汉的见习和奔赴千里于南京相聚离别，十一月的咸宁的意气全马和深圳的梧桐烟雨，十二月的花城懵懂实习，三月的福州出差昏天黑地。四月的坚决辞职返校陪她。一路走来，有过太多难忘，也有过太多的收获和失望。其实自己此时此刻更应该是在公司加班赶项目才对，而不是坐在寝室悠哉写博客。<br>&emsp;&emsp;就技术而言，自己更像是一个还没有学会走路的孩子，九月底接触前端，然后十二月在广州实习，将近四个月的实习，自己学到了很多，好似在我十一月去深圳的时候，我就做好了身份转换的准备，所以在那以后，我更多的感受是怎么努力学好技术提高自己。还记得刚到公司一直到年会放假，自己每天都待在公司，包括节假日和跨年，因为刚出来上班的缘故，所以很想快点提高自己。<br>&emsp;&emsp;其实这次辞职离开公司，是一个很突然的决定，连老板丹姐也说，对我寄予了很大的期望，不知道我为何会离开，其实对于公司，对于这份实习，我一直心怀感激其实有太多复杂的情感，  但是自己还是坚决的离开了团队，纵使心怀愧疚，但是仍然不后悔，虽然这个决定确实是错误的，自己也因此背负了很大的压力（毕竟三方也跟公司签过了），而且也会影响我以后的轨迹，但是正如自己所想：人生若无悔，那该多无趣呢？自己只是很固执的觉得要趁着大学毕业以前去做完那些我认为当下更重要的事情。<br>&emsp;&emsp;展望以后，只是希望自己这段时间学校待完，收拾好自己的一切，重新开始，正如十个月以前自己的初心，而自己现在相比十个月以前，也更加的坚定，知道自己应该做什么，应该怎么走。<br>&emsp;&emsp;最后送一句话给自己，也送给那些关心和帮助我的人： 悬崖亦是前程万里。 </p>
+    <content type="html"><![CDATA[<p>&emsp;&emsp;去年七月到如今的四月，十个月，一切好似梦一场，一路的孤独，迷茫，绝望以及成长，感觉都历历在目，而最后自己还是亲手将自己送回原点，逼自己重新开始。<br>&emsp;&emsp;十个月感觉自己的经历好似太多，也给自己带来很大的改变。七八九月在咸宁留校学习通宵达旦，十月武汉的见习和奔赴千里于南京相聚离别，十一月的咸宁的意气全马和深圳的梧桐烟雨，十二月的花城懵懂实习，三月的福州出差昏天黑地。四月的坚决辞职返校陪她。一路走来，有过太多难忘，也有过太多的收获和失望。其实自己此时此刻更应该是在公司加班赶项目才对，而不是坐在寝室悠哉写博客。<br>&emsp;&emsp;就技术而言，自己更像是一个还没有学会走路的孩子，九月底接触前端，然后十二月在广州实习，将近四个月的实习，自己学到了很多，好似在我十一月去深圳的时候，我就做好了身份转换的准备，所以在那以后，我更多的感受是怎么努力学好技术提高自己。还记得刚到公司一直到年会放假，自己每天都待在公司，包括节假日和跨年，因为刚出来上班的缘故，所以很想快点提高自己。<br>&emsp;&emsp;其实这次辞职离开公司，是一个很突然的决定，连老板丹姐也说，对我寄予了很大的期望，不知道我为何会离开，其实对于公司，对于这份实习，我一直心怀感激其实有太多复杂的情感，  但是自己还是坚决的离开了团队，纵使心怀愧疚，但是仍然不后悔，虽然这个决定确实是错误的，自己也因此背负了很大的压力（毕竟三方也跟公司签过了），而且也会影响我以后的轨迹，但是正如自己所想：人生若无悔，那该多无趣呢？自己只是很固执的觉得要趁着大学毕业以前去做完那些我认为当下更重要的事情。<br>&emsp;&emsp;展望以后，只是希望自己这段时间学校待完，收拾好自己的一切，重新开始，正如十个月以前自己的初心，而自己现在相比十个月以前，也更加的坚定，知道自己应该做什么，应该怎么走。<br>&emsp;&emsp;最后送一句话给自己，也送给那些关心和帮助我的人： 悬崖亦是前程万里。 </p>
 <p><img src="https://calabash519.github.io/my-picture/back.jpg" alt="back"></p>
 ]]></content>
     
     <summary type="html">
     
-      &lt;p&gt;&amp;emsp;&amp;emsp;去年七月到如今的四月，十个月，一切好似梦一场，一路的孤独，迷茫，绝望以及成长，感觉都历历在目，而最后自己还是亲手将自己送回原点，逼自己重新开始。
+      &lt;p&gt;&amp;emsp;&amp;emsp;去年七月到如今的四月，十个月，一切好似梦一场，一路的孤独，迷茫，绝望以及成长，感觉都历历在目，而最后自己还是亲手将自己送回原点，逼自己重新开始。&lt;br&gt;&amp;emsp;&amp;emsp;十个月感觉自己的经历好似太多，也给自己带来很大的改变。七八九月在咸宁留校学
     
     </summary>
     
@@ -128,9 +168,9 @@
     <link href="http://yoursite.com/2017/03/14/Echarts-map/"/>
     <id>http://yoursite.com/2017/03/14/Echarts-map/</id>
     <published>2017-03-14T13:31:03.000Z</published>
-    <updated>2017-07-14T15:07:05.651Z</updated>
+    <updated>2017-07-15T18:08:23.032Z</updated>
     
-    <content type="html"><![CDATA[<p>因为公司业务需求，前些阵子接触到了<a href="http://echarts.baidu.com/" target="_blank" rel="external">Echarts</a>，百度旗下开源的一个图标库，底层依赖 Canvas 类库 <a href="https://github.com/ecomfe/zrender" target="_blank" rel="external">ZRender</a>，其高度可个性化定制的数据可视化图表用来做数据分析，图形展示再合适不过，而且相对于D3陡峭的学习曲线，Echarts对于初学者更加友好，API随拿随用，强烈安利，毕竟熊厂难得有这么良心的作品。<a id="more"></a></p>
+    <content type="html"><![CDATA[<p>因为公司业务需求，前些阵子接触到了<a href="http://echarts.baidu.com/" target="_blank" rel="external">Echarts</a>，百度旗下开源的一个图标库，底层依赖 Canvas 类库 <a href="https://github.com/ecomfe/zrender" target="_blank" rel="external">ZRender</a>，其高度可个性化定制的数据可视化图表用来做数据分析，图形展示再合适不过，而且相对于D3陡峭的学习曲线，Echarts对于初学者更加友好，API随拿随用，强烈安利，毕竟熊厂难得有这么良心的作品。</p>
 <p><img src="https://calabash519.github.io/my-picture/Echarts.png" alt="Echarts"></p>
 <p>在Echarts官网，有完备的教程和对应的<a href="http://echarts.baidu.com/api.html#echarts" target="_blank" rel="external">API</a>，还有由各种图表组成的画廊，在那里你可以找到你想要的模板或者你也可以根据翻阅其API来拓展和自定义自己的需求。</p>
 <p><img src="https://calabash519.github.io/my-picture/gallary.png" alt=" gallery"></p>
@@ -148,7 +188,7 @@
     
     <summary type="html">
     
-      &lt;p&gt;因为公司业务需求，前些阵子接触到了&lt;a href=&quot;http://echarts.baidu.com/&quot;&gt;Echarts&lt;/a&gt;，百度旗下开源的一个图标库，底层依赖 Canvas 类库 &lt;a href=&quot;https://github.com/ecomfe/zrender&quot;&gt;ZRender&lt;/a&gt;，其高度可个性化定制的数据可视化图表用来做数据分析，图形展示再合适不过，而且相对于D3陡峭的学习曲线，Echarts对于初学者更加友好，API随拿随用，强烈安利，毕竟熊厂难得有这么良心的作品。
+      &lt;p&gt;因为公司业务需求，前些阵子接触到了&lt;a href=&quot;http://echarts.baidu.com/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Echarts&lt;/a&gt;，百度旗下开源的一个图标库，底层依赖 Canvas 类库 &lt;a href=&quot;http
     
     </summary>
     
