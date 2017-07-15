@@ -102,10 +102,10 @@
     <link href="http://yoursite.com/2017/05/15/mongodb-and-robomango/"/>
     <id>http://yoursite.com/2017/05/15/mongodb-and-robomango/</id>
     <published>2017-05-15T01:55:36.000Z</published>
-    <updated>2017-07-15T18:08:45.988Z</updated>
+    <updated>2017-07-15T20:38:37.421Z</updated>
     
     <content type="html"><![CDATA[<p>每个前端的心里都少不了一个全栈的梦，最近在折腾node，所以少不了数据库的操作，由于以前对于数据库接触也比较少，所以开始学习MongoDB多少有点忐忑，不过开始了以后才发现，原来非关系型数据库大哥MongoDB也挺好学的啊，不过总是用MongoDB shell中总是觉得麻烦也不直观，所以想着找一个MongoDB的可视化工具用用，后来找到了RoboMongo，这名字听起来怪怪的，不过用起来才发现，真还挺好用。</p>
-<p>想学MongoDB的话，基本的安装跟shell操作应该是不用多说，网上的文档教程太多，用点心总是能够弄好的。MongoDB的下载地址：<a href="https://www.mongodb.com/，RoboMongo的下载地址：https://robomongo.org/" target="_blank" rel="external">https://www.mongodb.com/，RoboMongo的下载地址：https://robomongo.org/</a></p>
+<p>想学MongoDB的话，基本的安装跟shell操作应该是不用多说，网上的文档教程太多，用点心总是能够弄好的。MongoDB的下载地址：<a href="https://www.mongodb.com" target="_blank" rel="external">摸我</a>，  RoboMongo的下载地址：<a href="https://robomongo.org" target="_blank" rel="external">摸我</a></p>
 <p>下载安装好了以后通过管理员身份打开控制台，启动MongoDB</p>
 <p><img src="https://calabash519.github.io/my-picture/shell.png" alt="shell"></p>
 <p>然后打开RoboMongo，连接上MongoDB，下面就可以开始愉快的右键创建数据库，集合和文档：</p>
