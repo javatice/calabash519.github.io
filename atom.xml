@@ -292,4 +292,45 @@
     
   </entry>
   
+  <entry>
+    <title>小试webpack</title>
+    <link href="http://yoursite.com/2017/02/11/webpack-exper/"/>
+    <id>http://yoursite.com/2017/02/11/webpack-exper/</id>
+    <published>2017-02-10T17:55:36.000Z</published>
+    <updated>2017-07-20T18:05:01.738Z</updated>
+    
+    <content type="html"><![CDATA[<p>个人接触前端并不是很久，对于webpack却是久仰大名，也难怪， 作为一款优秀的模块加载器兼打包工具，webpack近来风头可谓一时无二，自己也想着学习并希望能够了解其工作方式和理念，抛开跟风不谈，至少学习新的技术对自己是大有裨益的。</p>
+<p><img src="https://calabash519.github.io/my-picture/webpack.png" alt="webpack"></p>
+<p>引用一张webpack<a href="https://webpack.js.org/" target="_blank" rel="external">官网</a>的图片，作为一款模块打包器，webpack负责分析模块间的依赖关系，随即将模块按照不同的加载器规则生成相对应的资源。我们需要模块化工具为我们做的，包括初始加载量少，按需加载，自定义打包逻辑等功能功能，webpack都能够满足，它的loader加载器可以将各种类型的资源转换成我们所需要的模块，其丰富的插件系统也让我们自定义需求。</p>
+<p><strong>安装</strong></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//node 环境自不必多说</span></div><div class="line"><span class="comment">//全局安装webpack</span></div><div class="line">npm install -g webpack</div><div class="line"><span class="comment">//进入项目目录</span></div><div class="line"><span class="comment">//生成package.json</span></div><div class="line">npm init</div><div class="line"><span class="comment">//安装webpack依赖</span></div><div class="line">npm install webpack --save-dev</div></pre></td></tr></table></figure>
+<p><strong>基本使用</strong></p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">//静态页面：index.html</div><div class="line"><span class="meta">&lt;!DOCTYPE html&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">head</span>&gt;</span></div><div class="line">		<span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"UTF-8"</span>&gt;</span></div><div class="line">		<span class="tag">&lt;<span class="name">title</span>&gt;</span>webpack<span class="tag">&lt;/<span class="name">title</span>&gt;</span></div><div class="line">	<span class="tag">&lt;/<span class="name">head</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">body</span>&gt;</span></div><div class="line">		<span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">"text/javascript"</span> <span class="attr">src</span>=<span class="string">"bundle.js"</span> &gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div><div class="line">	<span class="tag">&lt;/<span class="name">body</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></div></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//JS文件入口：entry.js</span></div><div class="line"><span class="built_in">document</span>.write(<span class="string">"Hello world. "</span>)</div></pre></td></tr></table></figure>
+<p>编译 entry.js 并打包到 bundle.js,于命令行输入</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">webpack entry.js bundle.js</div></pre></td></tr></table></figure>
+<p>随即你会看到命令行会显示日志，提示你打包成功，打开浏览器运行index.html，你会看到Hello world.</p>
+<p><strong>配置</strong></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> webpack=<span class="built_in">require</span>(<span class="string">"webpack"</span>);</div><div class="line"><span class="built_in">module</span>.exports=&#123;</div><div class="line">	<span class="comment">//页面入口设置</span></div><div class="line">	entry:<span class="string">"./entry.js"</span>,</div><div class="line">	<span class="comment">//入口文件输出配置</span></div><div class="line">	output:&#123;</div><div class="line">		<span class="attr">path</span>:__dirname,</div><div class="line">		<span class="attr">filename</span>:<span class="string">"bundle.js"</span></div><div class="line">	&#125;,</div><div class="line">	<span class="attr">module</span>:&#123;</div><div class="line">		<span class="comment">//加载器配置</span></div><div class="line">		loaders:[</div><div class="line">          <span class="comment">//加载器可以使用简称例如style,其具体规则可见webpack的resolveLoader.moduleTemplates api</span></div><div class="line">          <span class="comment">//.css 文件使用style-loader和css-loader加载器来处理</span></div><div class="line">          &#123; <span class="attr">test</span>: <span class="regexp">/\.css$/</span>, <span class="attr">loader</span>: <span class="string">'style-loader!css-loader'</span> &#125;,</div><div class="line">           <span class="comment">//图片文件使用url-loader加载器来处理，小于8kb的话则转换成base64</span></div><div class="line">		  &#123; <span class="attr">test</span>: <span class="regexp">/\.(png|jpg)$/</span>, <span class="attr">loader</span>: <span class="string">'url-loader?limit=8192'</span>&#125;</div><div class="line">		]</div><div class="line">	&#125;,</div><div class="line">	<span class="comment">//插件项配置</span></div><div class="line">	plugins:[</div><div class="line"> 		<span class="comment">//为bundle.js头部添加注释信息     </span></div><div class="line">		<span class="keyword">new</span> webpack.BannerPlugin(<span class="string">"this file is created by cala"</span>)</div><div class="line">	]</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>webpack.config.js配置基本上存在于每一个使用webpack项目中，作为一个配置项，告诉webpack它的具体功能，包括加载器作用与插件项的功能，所有的加载器都是通过npm来加载，可以阅读相应的文档来了解不同加载器所提供的功能。</p>
+<p><strong>执行</strong></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">webpack --watch</div></pre></td></tr></table></figure>
+<p>启动监听模式，如此便可以避免在每次修改模块后都重新编译，开启监听模式后，没有变化的模块会在编译后缓存到内存中，而不会每次都被重新编译</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm install webpack-dev-server -g</div></pre></td></tr></table></figure>
+<p>使用webpack-dev-server构建本地服务器，在浏览器输入localhost：8080会以监听模式自动运行webpack</p>
+<p>关于webpack其实还有很多令人惊奇的地方，看官方文档可以知道很多关于webpack的工作原理或者是其相关的周边生态，道阻且长，也希望自己能够不断的学习新的技术，未来能够用于项目中，更深的体会其原理跟奥妙。</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;个人接触前端并不是很久，对于webpack却是久仰大名，也难怪， 作为一款优秀的模块加载器兼打包工具，webpack近来风头可谓一时无二，自己也想着学习并希望能够了解其工作方式和理念，抛开跟风不谈，至少学习新的技术对自己是大有裨益的。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;ht
+    
+    </summary>
+    
+      <category term="JavaScript" scheme="http://yoursite.com/categories/JavaScript/"/>
+    
+    
+  </entry>
+  
 </feed>

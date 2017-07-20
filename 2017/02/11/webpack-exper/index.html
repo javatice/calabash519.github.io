@@ -92,24 +92,19 @@
 
 
 
-<meta name="description" content="博客写的不多，所以Markdown的话用的也不是特别熟练，有几次碰到要插入本地图片，都比较尬，网上找一下方法，有的说可以把图片放在相邻文件夹，直接写绝对路径，也有的说使用图床，包括微博， 阿里云，七牛等等，个人觉得都太麻烦，发现有一种方法比较合适（适合用github pages做博客的童鞋），下面听我娓娓道来。 首先在本地电脑找个安全的地方建立一个存放Markdown图片的文件夹，在github上">
+<meta name="description" content="个人接触前端并不是很久，对于webpack却是久仰大名，也难怪， 作为一款优秀的模块加载器兼打包工具，webpack近来风头可谓一时无二，自己也想着学习并希望能够了解其工作方式和理念，抛开跟风不谈，至少学习新的技术对自己是大有裨益的。  引用一张webpack官网的图片，作为一款模块打包器，webpack负责分析模块间的依赖关系，随即将模块按照不同的加载器规则生成相对应的资源。我们需要模块化工具为">
 <meta name="keywords">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Markdown插入图片">
-<meta property="og:url" content="http://yoursite.com/2017/07/07/upload-picture-using-github/index.html">
+<meta property="og:title" content="小试webpack">
+<meta property="og:url" content="http://yoursite.com/2017/02/11/webpack-exper/index.html">
 <meta property="og:site_name" content="calabash519">
-<meta property="og:description" content="博客写的不多，所以Markdown的话用的也不是特别熟练，有几次碰到要插入本地图片，都比较尬，网上找一下方法，有的说可以把图片放在相邻文件夹，直接写绝对路径，也有的说使用图床，包括微博， 阿里云，七牛等等，个人觉得都太麻烦，发现有一种方法比较合适（适合用github pages做博客的童鞋），下面听我娓娓道来。 首先在本地电脑找个安全的地方建立一个存放Markdown图片的文件夹，在github上">
-<meta property="og:image" content="http://calabash519.github.io/my-picture/store.png">
-<meta property="og:image" content="http://calabash519.github.io/my-picture/setting.png">
-<meta property="og:image" content="http://calabash519.github.io/my-picture/branch.png">
-<meta property="og:image" content="http://calabash519.github.io/my-picture/dingwei.png">
-<meta property="og:image" content="http://calabash519.github.io/my-picture/show.png">
-<meta property="og:image" content="http://calabash519.github.io/my-picture/pride.jpg">
-<meta property="og:updated_time" content="2017-07-15T19:43:14.867Z">
+<meta property="og:description" content="个人接触前端并不是很久，对于webpack却是久仰大名，也难怪， 作为一款优秀的模块加载器兼打包工具，webpack近来风头可谓一时无二，自己也想着学习并希望能够了解其工作方式和理念，抛开跟风不谈，至少学习新的技术对自己是大有裨益的。  引用一张webpack官网的图片，作为一款模块打包器，webpack负责分析模块间的依赖关系，随即将模块按照不同的加载器规则生成相对应的资源。我们需要模块化工具为">
+<meta property="og:image" content="https://calabash519.github.io/my-picture/webpack.png">
+<meta property="og:updated_time" content="2017-07-20T18:05:01.738Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Markdown插入图片">
-<meta name="twitter:description" content="博客写的不多，所以Markdown的话用的也不是特别熟练，有几次碰到要插入本地图片，都比较尬，网上找一下方法，有的说可以把图片放在相邻文件夹，直接写绝对路径，也有的说使用图床，包括微博， 阿里云，七牛等等，个人觉得都太麻烦，发现有一种方法比较合适（适合用github pages做博客的童鞋），下面听我娓娓道来。 首先在本地电脑找个安全的地方建立一个存放Markdown图片的文件夹，在github上">
-<meta name="twitter:image" content="http://calabash519.github.io/my-picture/store.png">
+<meta name="twitter:title" content="小试webpack">
+<meta name="twitter:description" content="个人接触前端并不是很久，对于webpack却是久仰大名，也难怪， 作为一款优秀的模块加载器兼打包工具，webpack近来风头可谓一时无二，自己也想着学习并希望能够了解其工作方式和理念，抛开跟风不谈，至少学习新的技术对自己是大有裨益的。  引用一张webpack官网的图片，作为一款模块打包器，webpack负责分析模块间的依赖关系，随即将模块按照不同的加载器规则生成相对应的资源。我们需要模块化工具为">
+<meta name="twitter:image" content="https://calabash519.github.io/my-picture/webpack.png">
 
 
 
@@ -137,13 +132,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2017/07/07/upload-picture-using-github/"/>
+  <link rel="canonical" href="http://yoursite.com/2017/02/11/webpack-exper/"/>
 
 
 
 
 
-  <title>Markdown插入图片 | calabash519</title>
+  <title>小试webpack | calabash519</title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -308,7 +303,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/07/07/upload-picture-using-github/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/02/11/webpack-exper/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="calabash519">
@@ -329,7 +324,7 @@
             
             
               
-                Markdown插入图片
+                小试webpack
               
             
           </h1>
@@ -344,8 +339,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-07-07T10:05:22+08:00">
-                2017-07-07
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-02-11T01:55:36+08:00">
+                2017-02-11
               </time>
             
 
@@ -367,8 +362,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Markdown/" itemprop="url" rel="index">
-                    <span itemprop="name">Markdown</span>
+                  <a href="/categories/JavaScript/" itemprop="url" rel="index">
+                    <span itemprop="name">JavaScript</span>
                   </a>
                 </span>
 
@@ -384,7 +379,7 @@
 
           
           
-             <span id="/2017/07/07/upload-picture-using-github/" class="leancloud_visitors" data-flag-title="Markdown插入图片">
+             <span id="/2017/02/11/webpack-exper/" class="leancloud_visitors" data-flag-title="小试webpack">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -412,17 +407,26 @@
       
 
       
-        <p>博客写的不多，所以Markdown的话用的也不是特别熟练，有几次碰到要插入本地图片，都比较尬，网上找一下方法，有的说可以把图片放在相邻文件夹，直接写绝对路径，也有的说使用图床，包括微博， 阿里云，七牛等等，个人觉得都太麻烦，发现有一种方法比较合适（适合用github pages做博客的童鞋），下面听我娓娓道来。</p>
-<p>首先在本地电脑找个安全的地方建立一个存放Markdown图片的文件夹，在github上面建一个仓库存放这些图片，如下图所示：</p>
-<p><img src="http://calabash519.github.io/my-picture/store.png" alt="store"></p>
-<p>其次在创建的图片仓库的设置中找到GitHub Pages，将Source中的none设置为master branch， 随即你便可以将在你的GitHub Pages存放和查看你仓库中的文件（github上项目运行演示也是如此）</p>
-<p><img src="http://calabash519.github.io/my-picture/setting.png" alt="setting"></p>
-<p><img src="http://calabash519.github.io/my-picture/branch.png" alt="branch"></p>
-<p>接着在地址栏中输入上图中github pages中的项目地址，在后面加上你想要的图片的图片名，便可以在线展示</p>
-<p><img src="http://calabash519.github.io/my-picture/dingwei.png" alt="dingwei"></p>
-<p><img src="http://calabash519.github.io/my-picture/show.png" alt="show"></p>
-<p>最后将输入栏的地址拷贝在剪贴板，在Markdown插入该图片（图片的后缀名一定要注意），最后看下效果，如若顺利，图片会顺利展示</p>
-<p><img src="http://calabash519.github.io/my-picture/pride.jpg" alt="pride"></p>
+        <p>个人接触前端并不是很久，对于webpack却是久仰大名，也难怪， 作为一款优秀的模块加载器兼打包工具，webpack近来风头可谓一时无二，自己也想着学习并希望能够了解其工作方式和理念，抛开跟风不谈，至少学习新的技术对自己是大有裨益的。</p>
+<p><img src="https://calabash519.github.io/my-picture/webpack.png" alt="webpack"></p>
+<p>引用一张webpack<a href="https://webpack.js.org/" target="_blank" rel="external">官网</a>的图片，作为一款模块打包器，webpack负责分析模块间的依赖关系，随即将模块按照不同的加载器规则生成相对应的资源。我们需要模块化工具为我们做的，包括初始加载量少，按需加载，自定义打包逻辑等功能功能，webpack都能够满足，它的loader加载器可以将各种类型的资源转换成我们所需要的模块，其丰富的插件系统也让我们自定义需求。</p>
+<p><strong>安装</strong></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//node 环境自不必多说</span></div><div class="line"><span class="comment">//全局安装webpack</span></div><div class="line">npm install -g webpack</div><div class="line"><span class="comment">//进入项目目录</span></div><div class="line"><span class="comment">//生成package.json</span></div><div class="line">npm init</div><div class="line"><span class="comment">//安装webpack依赖</span></div><div class="line">npm install webpack --save-dev</div></pre></td></tr></table></figure>
+<p><strong>基本使用</strong></p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">//静态页面：index.html</div><div class="line"><span class="meta">&lt;!DOCTYPE html&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">head</span>&gt;</span></div><div class="line">		<span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"UTF-8"</span>&gt;</span></div><div class="line">		<span class="tag">&lt;<span class="name">title</span>&gt;</span>webpack<span class="tag">&lt;/<span class="name">title</span>&gt;</span></div><div class="line">	<span class="tag">&lt;/<span class="name">head</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">body</span>&gt;</span></div><div class="line">		<span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">"text/javascript"</span> <span class="attr">src</span>=<span class="string">"bundle.js"</span> &gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div><div class="line">	<span class="tag">&lt;/<span class="name">body</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></div></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//JS文件入口：entry.js</span></div><div class="line"><span class="built_in">document</span>.write(<span class="string">"Hello world. "</span>)</div></pre></td></tr></table></figure>
+<p>编译 entry.js 并打包到 bundle.js,于命令行输入</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">webpack entry.js bundle.js</div></pre></td></tr></table></figure>
+<p>随即你会看到命令行会显示日志，提示你打包成功，打开浏览器运行index.html，你会看到Hello world.</p>
+<p><strong>配置</strong></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> webpack=<span class="built_in">require</span>(<span class="string">"webpack"</span>);</div><div class="line"><span class="built_in">module</span>.exports=&#123;</div><div class="line">	<span class="comment">//页面入口设置</span></div><div class="line">	entry:<span class="string">"./entry.js"</span>,</div><div class="line">	<span class="comment">//入口文件输出配置</span></div><div class="line">	output:&#123;</div><div class="line">		<span class="attr">path</span>:__dirname,</div><div class="line">		<span class="attr">filename</span>:<span class="string">"bundle.js"</span></div><div class="line">	&#125;,</div><div class="line">	<span class="attr">module</span>:&#123;</div><div class="line">		<span class="comment">//加载器配置</span></div><div class="line">		loaders:[</div><div class="line">          <span class="comment">//加载器可以使用简称例如style,其具体规则可见webpack的resolveLoader.moduleTemplates api</span></div><div class="line">          <span class="comment">//.css 文件使用style-loader和css-loader加载器来处理</span></div><div class="line">          &#123; <span class="attr">test</span>: <span class="regexp">/\.css$/</span>, <span class="attr">loader</span>: <span class="string">'style-loader!css-loader'</span> &#125;,</div><div class="line">           <span class="comment">//图片文件使用url-loader加载器来处理，小于8kb的话则转换成base64</span></div><div class="line">		  &#123; <span class="attr">test</span>: <span class="regexp">/\.(png|jpg)$/</span>, <span class="attr">loader</span>: <span class="string">'url-loader?limit=8192'</span>&#125;</div><div class="line">		]</div><div class="line">	&#125;,</div><div class="line">	<span class="comment">//插件项配置</span></div><div class="line">	plugins:[</div><div class="line"> 		<span class="comment">//为bundle.js头部添加注释信息     </span></div><div class="line">		<span class="keyword">new</span> webpack.BannerPlugin(<span class="string">"this file is created by cala"</span>)</div><div class="line">	]</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>webpack.config.js配置基本上存在于每一个使用webpack项目中，作为一个配置项，告诉webpack它的具体功能，包括加载器作用与插件项的功能，所有的加载器都是通过npm来加载，可以阅读相应的文档来了解不同加载器所提供的功能。</p>
+<p><strong>执行</strong></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">webpack --watch</div></pre></td></tr></table></figure>
+<p>启动监听模式，如此便可以避免在每次修改模块后都重新编译，开启监听模式后，没有变化的模块会在编译后缓存到内存中，而不会每次都被重新编译</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm install webpack-dev-server -g</div></pre></td></tr></table></figure>
+<p>使用webpack-dev-server构建本地服务器，在浏览器输入localhost：8080会以监听模式自动运行webpack</p>
+<p>关于webpack其实还有很多令人惊奇的地方，看官方文档可以知道很多关于webpack的工作原理或者是其相关的周边生态，道阻且长，也希望自己能够不断的学习新的技术，未来能够用于项目中，更深的体会其原理跟奥妙。</p>
 
       
     </div>
@@ -469,8 +473,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/07/12/neccssary-front/" rel="next" title="技术规划">
-                <i class="fa fa-chevron-left"></i> 技术规划
+              <a href="/2017/03/14/Echarts-map/" rel="next" title="Echarts初体验">
+                <i class="fa fa-chevron-left"></i> Echarts初体验
               </a>
             
           </div>
@@ -478,10 +482,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2017/06/23/plan/" rel="prev" title="短期计划">
-                短期计划 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
