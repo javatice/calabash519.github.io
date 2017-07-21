@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2017-07-18T11:37:39.553Z</updated>
+  <updated>2017-07-21T01:50:22.279Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -20,12 +20,12 @@
     <link href="http://yoursite.com/2017/07/12/neccssary-front/"/>
     <id>http://yoursite.com/2017/07/12/neccssary-front/</id>
     <published>2017-07-12T12:18:22.000Z</published>
-    <updated>2017-07-18T11:37:39.553Z</updated>
+    <updated>2017-07-21T01:50:22.279Z</updated>
     
     <content type="html"><![CDATA[<p><strong>了解 JavaScript 这门语言</strong>，包括 闭包、IIFE、this、prototype 及一些底层实现（ES、VO、AO）、熟悉常用的设计模式与 JavaScript 范式（比如实现类与私有属性）。另外，新的 ES6 已经问世，包括 class, module, arrow function等等</p>
 <p><strong>了解前端常用的网络及后端知识</strong>，包括 Ajax、JSON、HTTP 请求、GET/POST 差异、RESTful、URL hash/query、webSocket、常用的跨域方式（JSONP/CORS、HTTP 强缓存/协商缓存，以及如何利用 CDN 、静态网站/动态网站区别、服务器端渲染/前端渲染区别等等 </p>
 <p><strong>学习使用进阶的 CSS</strong>，包括熟悉 CSS 3，使用 Scss/Less 等编译到 CSS 的语言，使用 autoprefixer 等 PostCSS 工具，了解 CSS 在 Scope/Namespace 上的缺陷，你还可以学习 CSS Modules、CSS in JS 这些有趣的新玩意 </p>
-<p><strong>了解前端的模块化规范</strong>，CommonJS 与 ES6 Modules 你必须要了解</p>
+<p><strong>了解前端的模块化规范</strong>，AMD和CMD的作用原理和规范以及CommonJS 与 ES6 Modules 你必须要了解</p>
 <p><strong>熟悉 Git 与 Shell 的使用</strong>，基于 git 的版本管理、分支管理与团队协作，包括简单的 Linux/Unix 命令</p>
 <p><strong>熟悉并且习惯使用 Node</strong>，包括了解 npm、使用 Grunt/Gulp/Browserify/Webpack 优化你的工作流、对代码进行打包、混淆、压缩、发布，使用 Express/Koa 配合 MongoDB/Redis 涉足到后端领域，或者尝试用 Node 做后端渲染优化首屏体验 </p>
 <p><strong>了解各种 HTML 5 的新 API</strong>，包括 Canvas，webGL、File API、App Cache、localStorage、IndexedDB、Drag &amp; Drop、更高级的 DOM API、Fetch API 等等 </p>
@@ -45,7 +45,7 @@
     
     </summary>
     
-      <category term="成长" scheme="http://yoursite.com/categories/%E6%88%90%E9%95%BF/"/>
+      <category term="JavaScript" scheme="http://yoursite.com/categories/JavaScript/"/>
     
     
   </entry>
@@ -263,7 +263,7 @@
     <link href="http://yoursite.com/2017/03/14/Echarts-map/"/>
     <id>http://yoursite.com/2017/03/14/Echarts-map/</id>
     <published>2017-03-14T13:31:03.000Z</published>
-    <updated>2017-07-15T18:08:23.032Z</updated>
+    <updated>2017-07-21T01:48:46.629Z</updated>
     
     <content type="html"><![CDATA[<p>因为公司业务需求，前些阵子接触到了<a href="http://echarts.baidu.com/" target="_blank" rel="external">Echarts</a>，百度旗下开源的一个图标库，底层依赖 Canvas 类库 <a href="https://github.com/ecomfe/zrender" target="_blank" rel="external">ZRender</a>，其高度可个性化定制的数据可视化图表用来做数据分析，图形展示再合适不过，而且相对于D3陡峭的学习曲线，Echarts对于初学者更加友好，API随拿随用，强烈安利，毕竟熊厂难得有这么良心的作品。</p>
 <p><img src="https://calabash519.github.io/my-picture/Echarts.png" alt="Echarts"></p>
@@ -287,7 +287,7 @@
     
     </summary>
     
-      <category term="Echarts" scheme="http://yoursite.com/categories/Echarts/"/>
+      <category term="JavaScript" scheme="http://yoursite.com/categories/JavaScript/"/>
     
     
   </entry>
