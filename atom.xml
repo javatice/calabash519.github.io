@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2017-07-21T01:50:22.279Z</updated>
+  <updated>2017-07-22T09:28:23.860Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -14,6 +14,40 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>JavaScript中函数纪要（一）</title>
+    <link href="http://yoursite.com/2017/07/22/function-property/"/>
+    <id>http://yoursite.com/2017/07/22/function-property/</id>
+    <published>2017-07-22T08:04:43.000Z</published>
+    <updated>2017-07-22T09:28:23.860Z</updated>
+    
+    <content type="html"><![CDATA[<p>JavaScript中函数是一等公民，所有的函数实际上是一个Function对象，与其他引用类型一样拥有着属性和方法，也可以被外界或者自身调用，也可以像传递参数一样将函数传递给另一个函数。</p>
+<p>JavaScript中函数没有重载的概念，当定义两个同名函数的时候，前一个函数会被覆盖掉，举个栗子。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">add</span>(<span class="params">num</span>)</span>&#123;</div><div class="line">	<span class="built_in">console</span>.log(num+<span class="number">100</span>)</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">add</span>(<span class="params">num</span>)</span>&#123;</div><div class="line">	<span class="built_in">console</span>.log(num+<span class="number">200</span>)</div><div class="line">&#125;</div><div class="line">add(<span class="number">100</span>)<span class="comment">//300</span></div></pre></td></tr></table></figure>
+<p>为何会没有函数重载，是因为JavaScript中函数定义有以下三种，分别是函数声明，函数表达式以及使用Function构造函数。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//函数声明</span></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">add</span>(<span class="params">num</span>)</span>&#123;</div><div class="line">	<span class="built_in">console</span>.log(num+<span class="number">100</span>)</div><div class="line">&#125;</div><div class="line"><span class="comment">//函数表达式</span></div><div class="line"><span class="keyword">var</span> add=<span class="function"><span class="keyword">function</span>(<span class="params">num</span>)</span>&#123;</div><div class="line">  <span class="built_in">console</span>.log(num+<span class="number">200</span>)</div><div class="line">&#125;</div><div class="line"><span class="comment">//Function构造函数</span></div><div class="line"><span class="keyword">var</span> add=<span class="keyword">new</span> <span class="built_in">Function</span>(<span class="string">"num"</span>,<span class="string">"console.log('num+300')"</span>)</div><div class="line"></div><div class="line">add(<span class="number">100</span>)<span class="comment">//400</span></div></pre></td></tr></table></figure>
+<p>可以看到，当定义同名的函数的时候，也就相当于定义了同名的变量，故而后面的变量会覆盖掉前面的变量，另外需要注意的是JavaScript作用域中的 hoist，包括变量声明提升与函数函数提升。</p>
+<p>对于变量来说，在ES5中var定义的变量会提升到作用域中所有的函数与语句前面，而ES6中let定义的变量则不会，let声明的变量会在其相应的代码块中建立一个暂时性死区，直至变量被声明。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//var声明变量</span></div><div class="line"><span class="built_in">console</span>.log(x === <span class="literal">undefined</span>); <span class="comment">// "true"</span></div><div class="line"><span class="keyword">var</span> x = <span class="number">3</span>;</div><div class="line"><span class="comment">//let声明变量</span></div><div class="line"><span class="built_in">console</span>.log(x === <span class="literal">undefined</span>); <span class="comment">// Uncaught ReferenceError: x is not defined</span></div><div class="line"><span class="keyword">let</span> x = <span class="number">3</span>;</div></pre></td></tr></table></figure>
+<p>对于函数来说，函数声明会被提升到作用域顶部，而函数表达式则不会，因而比较稳妥的是在最后调用函数</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//函数声明</span></div><div class="line">hoist()<span class="comment">// hello world</span></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">hoist</span>(<span class="params"></span>)</span>&#123;</div><div class="line">	<span class="built_in">console</span>.log(<span class="string">"hello world"</span>)</div><div class="line">&#125;</div><div class="line"><span class="comment">//函数表达式</span></div><div class="line">hoist()<span class="comment">// hoist is not a function</span></div><div class="line"><span class="keyword">var</span> hoist = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">	<span class="built_in">console</span>.log(<span class="string">"hello world"</span>)</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>也可以将函数作为另一个函数的结果返回，若是返回函数中保存着对外部函数的引用，会发生很好玩的情况：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">closure</span>(<span class="params"></span>)</span>&#123;</div><div class="line">  <span class="keyword">var</span> foo=<span class="number">10</span>;</div><div class="line">  <span class="keyword">var</span> bar=<span class="number">2</span>;</div><div class="line">  <span class="keyword">return</span> <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">    <span class="keyword">return</span> foo*bar;</div><div class="line">  &#125;</div><div class="line">&#125;;</div><div class="line"><span class="keyword">var</span> handle=closure();</div><div class="line"><span class="built_in">console</span>.log(handle());<span class="comment">//20</span></div></pre></td></tr></table></figure>
+<p>可以看到的是，我们在closure函数内部定义了两个局部变量，然后返回带有局部变量操作结果的匿名函数，将closure函数执行后的结果（保存着foo，bar变量引用的匿名函数）赋给handle变量，此时执行handle函数可以看到，输出了closure函数内局部变量操作的结果，此时我们称这种现象为闭包，闭包其实是一个函数，在上述栗子中便是指代的closure函数内的匿名函数。不过值得注意的是，由于闭包会携带包含它的外部函数的整个作用域，故而会很占内存，因此要及时释放变量的引用，不要让其常驻内存，不然会导致内存占用过多，最后出现内存泄漏的情况。</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;JavaScript中函数是一等公民，所有的函数实际上是一个Function对象，与其他引用类型一样拥有着属性和方法，也可以被外界或者自身调用，也可以像传递参数一样将函数传递给另一个函数。&lt;/p&gt;
+&lt;p&gt;JavaScript中函数没有重载的概念，当定义两个同名函数的时候，前
+    
+    </summary>
+    
+      <category term="JavaScript" scheme="http://yoursite.com/categories/JavaScript/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>技术规划</title>
