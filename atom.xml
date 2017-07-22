@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2017-07-22T09:28:23.860Z</updated>
+  <updated>2017-07-22T10:32:55.427Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -16,11 +16,43 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>JavaScript中函数纪要（二）</title>
+    <link href="http://yoursite.com/2017/07/20/function-notes/"/>
+    <id>http://yoursite.com/2017/07/20/function-notes/</id>
+    <published>2017-07-20T11:04:43.000Z</published>
+    <updated>2017-07-22T10:32:55.427Z</updated>
+    
+    <content type="html"><![CDATA[<p>在函数内部有着一个名叫arguments的类数组对象，内部包含着传入函数的所有参数，在arguments对象中，有一个名叫callee的属性，其作用可见下面这个阶乘的栗子：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">factorial</span>(<span class="params">num</span>)</span>&#123;</div><div class="line">  <span class="keyword">if</span>(num&lt;=<span class="number">1</span>)&#123;</div><div class="line">    <span class="keyword">return</span> <span class="number">1</span>;</div><div class="line">  &#125;<span class="keyword">else</span>&#123;</div><div class="line">    <span class="keyword">return</span> num*factorial(num<span class="number">-1</span>);</div><div class="line">    <span class="comment">//这里也可以写成如下方式</span></div><div class="line">    <span class="keyword">return</span> num*<span class="built_in">arguments</span>.callee(num<span class="number">-1</span>);</div><div class="line">  &#125;</div><div class="line">&#125;</div><div class="line"><span class="built_in">console</span>.log(factorial(<span class="number">5</span>))<span class="comment">//120</span></div></pre></td></tr></table></figure>
+<p>可以看到的是，arguments.callee这个属性作为一个指针指向了拥有arguments对象的函数，也可以认为是当前正在执行的函数，而且可以消除与函数名factorial的耦合，不过值得注意的是，在ES5的严格模式下，调用arguments.callee方法会报错。</p>
+<p>函数内部还有一个对象，就是我们所熟悉的this对象，this对象引用的是函数执行的环境对象，简单来说，this总是指向函数的直接调用者，而非间接调用者，在对象中，如果有new关键字，this指向new出来的那个对象。</p>
+<p>在函数对象中，有个属性名为caller，这个属性作为一个引用，保存着调用当前函数的其他函数的引用，如下</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">  bar();<span class="comment">//function ()&#123;bar();&#125;</span></div><div class="line">&#125;)();</div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">bar</span>(<span class="params"></span>)</span>&#123;</div><div class="line">  <span class="built_in">console</span>.log(bar.caller)<span class="comment">//arguments.callee.caller</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>可以看到的是，匿名函数内部调用了bar函数，在bar函数内部，因为 bar.calller指向了调用bar的匿名函数，所以执行bar.caller就等于匿名函数的源代码，同callee一样的是，在ES5中访问caller属性会报错。</p>
+<p>函数内部除了以上容易混淆的属性以外，还有些方法有时候也会让人比较困惑，例如call跟apply，show the code</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">add</span>(<span class="params">a,b</span>)</span>&#123;</div><div class="line">  <span class="keyword">return</span> a+b;</div><div class="line">&#125;</div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">foo</span>(<span class="params">a,b</span>)</span>&#123;</div><div class="line">  <span class="built_in">console</span>.log(add.call(<span class="keyword">this</span>,a,b))</div><div class="line">&#125;</div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">bar</span>(<span class="params">a,b</span>)</span>&#123;</div><div class="line">  <span class="built_in">console</span>.log(add.apply(<span class="keyword">this</span>,[a,b]))</div><div class="line">&#125;</div><div class="line">foo(<span class="number">20</span>,<span class="number">20</span>)<span class="comment">//40</span></div><div class="line">bar(<span class="number">20</span>,<span class="number">20</span>)<span class="comment">//40</span></div></pre></td></tr></table></figure>
+<p>可以看到的是，call和apply两个方法作用都是在特定的作用域上面调用函数，换句话说，就是改变函数体内this指向，在foo和bar函数中，我们利用call和apply将函数的this值绑定到add函数上，因此它们便可以对内部的参数执行add函数里面的加法操作。</p>
+<p>call和apply方法大作用致相同，不同的方法接受的参数，call必须要明确所有要处理的参数，也就是说，参数必须要逐个列举，而apply方法可以选择数组作为参数，因此可以在具体的环境中，看看是选择call还是apply方法。</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;在函数内部有着一个名叫arguments的类数组对象，内部包含着传入函数的所有参数，在arguments对象中，有一个名叫callee的属性，其作用可见下面这个阶乘的栗子：&lt;/p&gt;
+&lt;figure class=&quot;highlight javascript&quot;&gt;&lt;table&gt;&lt;t
+    
+    </summary>
+    
+      <category term="JavaScript" scheme="http://yoursite.com/categories/JavaScript/"/>
+    
+    
+  </entry>
+  
+  <entry>
     <title>JavaScript中函数纪要（一）</title>
-    <link href="http://yoursite.com/2017/07/22/function-property/"/>
-    <id>http://yoursite.com/2017/07/22/function-property/</id>
-    <published>2017-07-22T08:04:43.000Z</published>
-    <updated>2017-07-22T09:28:23.860Z</updated>
+    <link href="http://yoursite.com/2017/07/18/function-property/"/>
+    <id>http://yoursite.com/2017/07/18/function-property/</id>
+    <published>2017-07-18T08:04:43.000Z</published>
+    <updated>2017-07-22T09:46:02.354Z</updated>
     
     <content type="html"><![CDATA[<p>JavaScript中函数是一等公民，所有的函数实际上是一个Function对象，与其他引用类型一样拥有着属性和方法，也可以被外界或者自身调用，也可以像传递参数一样将函数传递给另一个函数。</p>
 <p>JavaScript中函数没有重载的概念，当定义两个同名函数的时候，前一个函数会被覆盖掉，举个栗子。</p>
