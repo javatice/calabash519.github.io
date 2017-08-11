@@ -92,17 +92,17 @@
 
 
 
-<meta name="description" content="JavaScript中函数是一等公民，所有的函数实际上是一个Function对象，与其他引用类型一样拥有着属性和方法，也可以被外界或者自身调用，也可以像传递参数一样将函数传递给另一个函数。 JavaScript中函数没有重载的概念，当定义两个同名函数的时候，前一个函数会被覆盖掉，举个栗子。 12345678function add(num)&amp;#123;	console.log(num+100)&amp;#">
+<meta name="description" content="JavaScript中函数是一等公民，所有的函数实际上是一个Function对象，与其他引用类型一样拥有着属性和方法，也可以被外界或者自身调用，也可以像传递参数一样将函数传递给另一个函数。">
 <meta name="keywords">
 <meta property="og:type" content="article">
 <meta property="og:title" content="JavaScript中函数纪要（上）">
 <meta property="og:url" content="http://yoursite.com/2017/07/18/function-property/index.html">
 <meta property="og:site_name" content="calabash519">
-<meta property="og:description" content="JavaScript中函数是一等公民，所有的函数实际上是一个Function对象，与其他引用类型一样拥有着属性和方法，也可以被外界或者自身调用，也可以像传递参数一样将函数传递给另一个函数。 JavaScript中函数没有重载的概念，当定义两个同名函数的时候，前一个函数会被覆盖掉，举个栗子。 12345678function add(num)&amp;#123;	console.log(num+100)&amp;#">
-<meta property="og:updated_time" content="2017-07-31T01:11:54.042Z">
+<meta property="og:description" content="JavaScript中函数是一等公民，所有的函数实际上是一个Function对象，与其他引用类型一样拥有着属性和方法，也可以被外界或者自身调用，也可以像传递参数一样将函数传递给另一个函数。">
+<meta property="og:updated_time" content="2017-08-11T13:20:46.963Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="JavaScript中函数纪要（上）">
-<meta name="twitter:description" content="JavaScript中函数是一等公民，所有的函数实际上是一个Function对象，与其他引用类型一样拥有着属性和方法，也可以被外界或者自身调用，也可以像传递参数一样将函数传递给另一个函数。 JavaScript中函数没有重载的概念，当定义两个同名函数的时候，前一个函数会被覆盖掉，举个栗子。 12345678function add(num)&amp;#123;	console.log(num+100)&amp;#">
+<meta name="twitter:description" content="JavaScript中函数是一等公民，所有的函数实际上是一个Function对象，与其他引用类型一样拥有着属性和方法，也可以被外界或者自身调用，也可以像传递参数一样将函数传递给另一个函数。">
 
 
 
@@ -405,7 +405,7 @@
       
 
       
-        <p>JavaScript中函数是一等公民，所有的函数实际上是一个Function对象，与其他引用类型一样拥有着属性和方法，也可以被外界或者自身调用，也可以像传递参数一样将函数传递给另一个函数。</p>
+        <p>JavaScript中函数是一等公民，所有的函数实际上是一个Function对象，与其他引用类型一样拥有着属性和方法，也可以被外界或者自身调用，也可以像传递参数一样将函数传递给另一个函数。 <a id="more"></a></p>
 <p>JavaScript中函数没有重载的概念，当定义两个同名函数的时候，前一个函数会被覆盖掉，举个栗子。</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">add</span>(<span class="params">num</span>)</span>&#123;</div><div class="line">	<span class="built_in">console</span>.log(num+<span class="number">100</span>)</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">add</span>(<span class="params">num</span>)</span>&#123;</div><div class="line">	<span class="built_in">console</span>.log(num+<span class="number">200</span>)</div><div class="line">&#125;</div><div class="line">add(<span class="number">100</span>)<span class="comment">//300</span></div></pre></td></tr></table></figure>
 <p>为何会没有函数重载，是因为JavaScript中函数定义有以下三种，分别是函数声明，函数表达式以及使用Function构造函数。</p>
