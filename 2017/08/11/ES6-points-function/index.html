@@ -92,24 +92,17 @@
 
 
 
-<meta name="description" content="博客写的不多，所以Markdown的话用的也不是特别熟练，有几次碰到要插入本地图片，都比较尬，网上找一下方法，有的说可以把图片放在相邻文件夹，直接写绝对路径，也有的说使用图床，包括微博， 阿里云，七牛等等，个人觉得都太麻烦，发现有一种方法比较合适（适合用github pages做博客的童鞋），下面听我娓娓道来。">
+<meta name="description" content="关于ES6的学习总结，前两天写了第一篇，主要是讲关于变量声明关键字let和const，新增类型Symbol以及模板字符串，今天准备写第二篇，主要是关于ES6里面的函数，ES6新增了箭头函数，Rest参数以及参数默认值。">
 <meta name="keywords">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Markdown插入图片">
-<meta property="og:url" content="http://yoursite.com/2017/07/07/upload-picture-using-github/index.html">
+<meta property="og:title" content="ES6学习总结（二）">
+<meta property="og:url" content="http://yoursite.com/2017/08/11/ES6-points-function/index.html">
 <meta property="og:site_name" content="calabash519">
-<meta property="og:description" content="博客写的不多，所以Markdown的话用的也不是特别熟练，有几次碰到要插入本地图片，都比较尬，网上找一下方法，有的说可以把图片放在相邻文件夹，直接写绝对路径，也有的说使用图床，包括微博， 阿里云，七牛等等，个人觉得都太麻烦，发现有一种方法比较合适（适合用github pages做博客的童鞋），下面听我娓娓道来。">
-<meta property="og:image" content="http://calabash519.github.io/my-picture/store.png">
-<meta property="og:image" content="http://calabash519.github.io/my-picture/setting.png">
-<meta property="og:image" content="http://calabash519.github.io/my-picture/branch.png">
-<meta property="og:image" content="http://calabash519.github.io/my-picture/dingwei.png">
-<meta property="og:image" content="http://calabash519.github.io/my-picture/show.png">
-<meta property="og:image" content="http://calabash519.github.io/my-picture/pride.jpg">
-<meta property="og:updated_time" content="2017-08-11T13:23:19.722Z">
+<meta property="og:description" content="关于ES6的学习总结，前两天写了第一篇，主要是讲关于变量声明关键字let和const，新增类型Symbol以及模板字符串，今天准备写第二篇，主要是关于ES6里面的函数，ES6新增了箭头函数，Rest参数以及参数默认值。">
+<meta property="og:updated_time" content="2017-08-13T07:30:43.763Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Markdown插入图片">
-<meta name="twitter:description" content="博客写的不多，所以Markdown的话用的也不是特别熟练，有几次碰到要插入本地图片，都比较尬，网上找一下方法，有的说可以把图片放在相邻文件夹，直接写绝对路径，也有的说使用图床，包括微博， 阿里云，七牛等等，个人觉得都太麻烦，发现有一种方法比较合适（适合用github pages做博客的童鞋），下面听我娓娓道来。">
-<meta name="twitter:image" content="http://calabash519.github.io/my-picture/store.png">
+<meta name="twitter:title" content="ES6学习总结（二）">
+<meta name="twitter:description" content="关于ES6的学习总结，前两天写了第一篇，主要是讲关于变量声明关键字let和const，新增类型Symbol以及模板字符串，今天准备写第二篇，主要是关于ES6里面的函数，ES6新增了箭头函数，Rest参数以及参数默认值。">
 
 
 
@@ -137,13 +130,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2017/07/07/upload-picture-using-github/"/>
+  <link rel="canonical" href="http://yoursite.com/2017/08/11/ES6-points-function/"/>
 
 
 
 
 
-  <title>Markdown插入图片 | calabash519</title>
+  <title>ES6学习总结（二） | calabash519</title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -308,7 +301,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/07/07/upload-picture-using-github/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/08/11/ES6-points-function/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="calabash519">
@@ -329,7 +322,7 @@
             
             
               
-                Markdown插入图片
+                ES6学习总结（二）
               
             
           </h1>
@@ -344,8 +337,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-07-07T10:05:22+08:00">
-                2017-07-07
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-08-11T00:38:06+08:00">
+                2017-08-11
               </time>
             
 
@@ -367,8 +360,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Markdown/" itemprop="url" rel="index">
-                    <span itemprop="name">Markdown</span>
+                  <a href="/categories/ECMAscript6/" itemprop="url" rel="index">
+                    <span itemprop="name">ECMAscript6</span>
                   </a>
                 </span>
 
@@ -384,7 +377,7 @@
 
           
           
-             <span id="/2017/07/07/upload-picture-using-github/" class="leancloud_visitors" data-flag-title="Markdown插入图片">
+             <span id="/2017/08/11/ES6-points-function/" class="leancloud_visitors" data-flag-title="ES6学习总结（二）">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -412,17 +405,39 @@
       
 
       
-        <p>博客写的不多，所以Markdown的话用的也不是特别熟练，有几次碰到要插入本地图片，都比较尬，网上找一下方法，有的说可以把图片放在相邻文件夹，直接写绝对路径，也有的说使用图床，包括微博， 阿里云，七牛等等，个人觉得都太麻烦，发现有一种方法比较合适（适合用github pages做博客的童鞋），下面听我娓娓道来。 <a id="more"></a></p>
-<p>首先在本地电脑找个安全的地方建立一个存放Markdown图片的文件夹，在github上面建一个仓库存放这些图片，如下图所示：</p>
-<p><img src="http://calabash519.github.io/my-picture/store.png" alt="store"></p>
-<p>其次在创建的图片仓库的设置中找到GitHub Pages，将Source中的none设置为master branch， 随即你便可以将在你的GitHub Pages存放和查看你仓库中的文件（github上项目运行演示也是如此）</p>
-<p><img src="http://calabash519.github.io/my-picture/setting.png" alt="setting"></p>
-<p><img src="http://calabash519.github.io/my-picture/branch.png" alt="branch"></p>
-<p>接着在地址栏中输入上图中github pages中的项目地址，在后面加上你想要的图片的图片名，便可以在线展示</p>
-<p><img src="http://calabash519.github.io/my-picture/dingwei.png" alt="dingwei"></p>
-<p><img src="http://calabash519.github.io/my-picture/show.png" alt="show"></p>
-<p>最后将输入栏的地址拷贝在剪贴板，在Markdown插入该图片（图片的后缀名一定要注意），最后看下效果，如若顺利，图片会顺利展示</p>
-<p><img src="http://calabash519.github.io/my-picture/pride.jpg" alt="pride"></p>
+        <p>关于ES6的学习总结，前两天写了第一篇，主要是讲关于变量声明关键字let和const，新增类型Symbol以及模板字符串，今天准备写第二篇，主要是关于ES6里面的函数，ES6新增了箭头函数，Rest参数以及参数默认值。<a id="more"></a></p>
+<p><strong>箭头函数</strong></p>
+<p>关于箭头函数，它就是由一个箭头来定义的，例如：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//ES5</span></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">foo</span>(<span class="params">param</span>)</span>&#123;</div><div class="line">    <span class="keyword">return</span> param*param;</div><div class="line">&#125;</div><div class="line"><span class="comment">//ES6 箭头函数</span></div><div class="line"><span class="keyword">var</span> foo= <span class="function"><span class="params">param</span> =&gt;</span> param*param;</div></pre></td></tr></table></figure>
+<p>上面的代码简单比较了ES5中普通函数与ES6箭头函数的的写法，很明显的可以看出，箭头函数显得更加的简便，箭头函数中，有一些需要注意的地方：</p>
+<p>返回值必须明确，并且加上在大括弧内必须加上return关键字，若是省略大括弧，则可以不要return</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//返回值的写法，下面两种是一样的</span></div><div class="line">() =&gt; <span class="string">"hello world"</span>;</div><div class="line"><span class="function"><span class="params">()</span> =&gt;</span> &#123; <span class="keyword">return</span> <span class="string">"hello word"</span>; &#125;</div></pre></td></tr></table></figure>
+<p>当参数参数的数目不止一个或者没有的时候，需要用小括弧（）包裹</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//没有参数或者多个参数需要加小括号 </span></div><div class="line"><span class="keyword">var</span> foo1 = <span class="function"><span class="params">()</span> =&gt;</span> <span class="string">"hello world"</span>;</div><div class="line"><span class="keyword">var</span> foo1 = <span class="function"><span class="params">()</span> =&gt;</span> &#123; <span class="keyword">return</span> <span class="string">"hello word"</span>; &#125;</div><div class="line"><span class="keyword">var</span> foo2 = <span class="function">(<span class="params">param1,param2</span>) =&gt;</span> param1*param2;</div></pre></td></tr></table></figure>
+<p>当返回的是一个对象的时候，需要注意大括弧外面加上（）</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//返回对象需要函数体外面要加小括号</span></div><div class="line"><span class="keyword">var</span> foo3 = <span class="function"><span class="params">param</span> =&gt;</span> (&#123;<span class="attr">key</span>: value&#125;)</div></pre></td></tr></table></figure>
+<p>箭头函数中this的使用跟普通函数也不一样，在JavaScript的普通函数中，都会有一个自己的this值，主要分为：</p>
+<ol>
+<li>函数作为全局函数，this指向全局对象</li>
+<li>函数作为对象中的方法，this指向该对象</li>
+<li>函数作为构造函数的时候，this指向构造函数new出来的新对象</li>
+<li>还可以通过call，apply，bind改变this的指向</li>
+</ol>
+<p>在箭头函数中，this属于词法作用域，直接由上下文确定，对于普通函数中指向不定的this，箭头函数中处理this无疑更加简单，如下：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//ES5普通函数</span></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">Man</span>(<span class="params"></span>)</span>&#123;</div><div class="line">  <span class="keyword">this</span>.age=<span class="number">22</span>;</div><div class="line">  <span class="keyword">return</span> <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">    <span class="keyword">this</span>.age+<span class="number">1</span>;</div><div class="line">  &#125;</div><div class="line">&#125;</div><div class="line"><span class="keyword">var</span> cala=<span class="keyword">new</span> Man();</div><div class="line"><span class="built_in">console</span>.log(cala())<span class="comment">//undefined</span></div><div class="line"></div><div class="line"><span class="comment">//ES6箭头函数</span></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">Man</span>(<span class="params"></span>)</span>&#123;</div><div class="line">  <span class="keyword">this</span>.age=<span class="number">22</span>;</div><div class="line">  <span class="keyword">return</span> <span class="function"><span class="params">()</span> =&gt;</span> <span class="keyword">this</span>.age+<span class="number">1</span>;</div><div class="line">&#125;</div><div class="line"><span class="keyword">var</span> cala=<span class="keyword">new</span> Man();</div><div class="line"><span class="built_in">console</span>.log(cala())<span class="comment">//23</span></div></pre></td></tr></table></figure>
+<p>箭头函数中没有arguments(我们可以用rest参数替代),也没有原型，也不能使用new 关键字，例如：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//没有arguments</span></div><div class="line"><span class="keyword">var</span> foo=<span class="function">(<span class="params">a,b</span>)=&gt;</span>&#123;<span class="keyword">return</span> <span class="built_in">arguments</span>[<span class="number">0</span>]*<span class="built_in">arguments</span>[<span class="number">1</span>]&#125;</div><div class="line"><span class="built_in">console</span>.log(foo(<span class="number">3</span>,<span class="number">5</span>))</div><div class="line"><span class="comment">//arguments is not defined</span></div><div class="line"></div><div class="line"><span class="comment">//没有原型</span></div><div class="line"><span class="keyword">var</span> Obj = <span class="function"><span class="params">()</span> =&gt;</span> &#123;&#125;;</div><div class="line"><span class="built_in">console</span>.log(Obj.prototype); </div><div class="line"><span class="comment">// undefined</span></div><div class="line"></div><div class="line"><span class="comment">//不能使用new 关键字</span></div><div class="line"><span class="keyword">var</span> Obj = <span class="function"><span class="params">()</span> =&gt;</span> &#123;<span class="string">"hello world"</span>&#125;;</div><div class="line"><span class="keyword">var</span> o = <span class="keyword">new</span> Obj(); </div><div class="line"><span class="comment">// TypeError: Obj is not a constructor</span></div></pre></td></tr></table></figure>
+<p><strong>Rest参数</strong></p>
+<p>Rest参数名为剩余参数，以…为前缀，上面讲过，ES6的箭头函数中不能使用arguments，我们可以用rest参数来替代，例如：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">foo</span>(<span class="params"></span>)</span>&#123;</div><div class="line">  <span class="keyword">return</span> <span class="built_in">arguments</span>.length;</div><div class="line">&#125;</div><div class="line"><span class="built_in">console</span>.log(foo(<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>)) <span class="comment">// 3</span></div><div class="line"></div><div class="line"><span class="keyword">var</span> foo= <span class="function">(<span class="params">...rest</span>) =&gt;</span> &#123;</div><div class="line">  <span class="keyword">return</span> rest.length;</div><div class="line">&#125;</div><div class="line"><span class="built_in">console</span>.log(foo(<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>)) <span class="comment">// 3</span></div></pre></td></tr></table></figure>
+<p>在rest参数前面若是有其他的形式参数，那么rest参数只能放在最后面：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> foo = <span class="function">(<span class="params">param1,param2,...rest</span>) =&gt;</span> &#123;</div><div class="line">	<span class="keyword">return</span> param1 + param2 + rest.length;</div><div class="line">&#125;;</div><div class="line"><span class="built_in">console</span>.log(foo(<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>)) <span class="comment">// 6</span></div><div class="line"></div><div class="line"><span class="keyword">var</span> foo = <span class="function">(<span class="params">param1,...rest,param2</span>) =&gt;</span> &#123;</div><div class="line">	<span class="keyword">return</span> param1 + param2 + rest.length;</div><div class="line">&#125;;</div><div class="line"><span class="built_in">console</span>.log(foo(<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>)) <span class="comment">//  Rest parameter must be last formal parameter</span></div></pre></td></tr></table></figure>
+<p><strong>默认参数值</strong></p>
+<p>在ES6以前，函数调用时，那些没有传递的参数，JavaScript默认为undefined，ES6中新增了参数默认值，允许使用默认值来初始化形参</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> foo = <span class="function">(<span class="params">param1,param2=<span class="number">10</span></span>) =&gt;</span> &#123;</div><div class="line">  <span class="keyword">return</span> param1*param2;</div><div class="line">&#125;</div><div class="line"><span class="built_in">console</span>.log(foo(<span class="number">10</span>)) <span class="comment">// 100</span></div></pre></td></tr></table></figure>
+<p>上面这个例子可以看到，定义了一个参数相乘的简单函数，在调用函数的时候，只传入了第一个参数的值，结果返回100，是因为在函数中第二个参数默认值为10，若我们在调用函数的时候没有显式的指明参数值，则会默认使用参数默认值。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> foo = <span class="function">(<span class="params">param1,param2=<span class="number">10</span></span>) =&gt;</span> &#123;</div><div class="line">  <span class="keyword">return</span> param1*param2;</div><div class="line">&#125;</div><div class="line"><span class="built_in">console</span>.log(foo(<span class="number">10</span>，<span class="number">20</span>)) <span class="comment">// 200</span></div></pre></td></tr></table></figure>
+<p>这次我们在调用函数大的时候，两个参数全部传递了值，因此返回200。</p>
 
       
     </div>
@@ -469,8 +484,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/07/12/neccssary-front/" rel="next" title="作为一名前端应该具备的">
-                <i class="fa fa-chevron-left"></i> 作为一名前端应该具备的
+              <a href="/2017/08/12/ES6-points-class/" rel="next" title="ES6学习总结（三）">
+                <i class="fa fa-chevron-left"></i> ES6学习总结（三）
               </a>
             
           </div>
@@ -479,8 +494,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2017/06/23/plan/" rel="prev" title="短期计划">
-                短期计划 <i class="fa fa-chevron-right"></i>
+              <a href="/2017/08/08/ES6-points-let/" rel="prev" title="ES6学习总结（一）">
+                ES6学习总结（一） <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>

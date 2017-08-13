@@ -92,17 +92,17 @@
 
 
 
-<meta name="description" content="前端发展的太快了，快到ES6,ES7出来之后，今年已经是ES8了，但是纵然前端发展很快，我们除了马不停蹄的学习新的技术之外，也要沉下心来，好好的潜心磨砺自己，本文是整理了自己学习ES6之后相关的知识要点，寄希望于书之于笔，一来自己可以更好地领悟，而来也可以留作日后翻阅查看。">
+<meta name="description" content="ES6模块化之前，前端模块化之路可谓是布满沧桑，从最开始的刀耕火种，无数的脚本层叠在一起引入 1234&amp;lt;script type=&quot;text/javascript&quot; src=&quot;a.js&quot;&amp;gt;&amp;lt;/script&amp;gt;&amp;lt;script type=&quot;text/javascript&quot; src=&quot;b.js&quot;&amp;gt;&amp;lt;/script&amp;gt;&amp;lt;script type=&quot;text/">
 <meta name="keywords">
 <meta property="og:type" content="article">
-<meta property="og:title" content="ES2015学习（一）">
-<meta property="og:url" content="http://yoursite.com/2017/08/08/ES2015-points/index.html">
+<meta property="og:title" content="ES6学习总结（四）">
+<meta property="og:url" content="http://yoursite.com/2017/08/13/ES6-points-module/index.html">
 <meta property="og:site_name" content="calabash519">
-<meta property="og:description" content="前端发展的太快了，快到ES6,ES7出来之后，今年已经是ES8了，但是纵然前端发展很快，我们除了马不停蹄的学习新的技术之外，也要沉下心来，好好的潜心磨砺自己，本文是整理了自己学习ES6之后相关的知识要点，寄希望于书之于笔，一来自己可以更好地领悟，而来也可以留作日后翻阅查看。">
-<meta property="og:updated_time" content="2017-08-11T15:07:59.436Z">
+<meta property="og:description" content="ES6模块化之前，前端模块化之路可谓是布满沧桑，从最开始的刀耕火种，无数的脚本层叠在一起引入 1234&amp;lt;script type=&quot;text/javascript&quot; src=&quot;a.js&quot;&amp;gt;&amp;lt;/script&amp;gt;&amp;lt;script type=&quot;text/javascript&quot; src=&quot;b.js&quot;&amp;gt;&amp;lt;/script&amp;gt;&amp;lt;script type=&quot;text/">
+<meta property="og:updated_time" content="2017-08-13T09:49:25.794Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="ES2015学习（一）">
-<meta name="twitter:description" content="前端发展的太快了，快到ES6,ES7出来之后，今年已经是ES8了，但是纵然前端发展很快，我们除了马不停蹄的学习新的技术之外，也要沉下心来，好好的潜心磨砺自己，本文是整理了自己学习ES6之后相关的知识要点，寄希望于书之于笔，一来自己可以更好地领悟，而来也可以留作日后翻阅查看。">
+<meta name="twitter:title" content="ES6学习总结（四）">
+<meta name="twitter:description" content="ES6模块化之前，前端模块化之路可谓是布满沧桑，从最开始的刀耕火种，无数的脚本层叠在一起引入 1234&amp;lt;script type=&quot;text/javascript&quot; src=&quot;a.js&quot;&amp;gt;&amp;lt;/script&amp;gt;&amp;lt;script type=&quot;text/javascript&quot; src=&quot;b.js&quot;&amp;gt;&amp;lt;/script&amp;gt;&amp;lt;script type=&quot;text/">
 
 
 
@@ -130,13 +130,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2017/08/08/ES2015-points/"/>
+  <link rel="canonical" href="http://yoursite.com/2017/08/13/ES6-points-module/"/>
 
 
 
 
 
-  <title>ES2015学习（一） | calabash519</title>
+  <title>ES6学习总结（四） | calabash519</title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -301,7 +301,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/08/08/ES2015-points/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/08/13/ES6-points-module/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="calabash519">
@@ -322,7 +322,7 @@
             
             
               
-                ES2015学习（一）
+                ES6学习总结（四）
               
             
           </h1>
@@ -337,8 +337,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-08-08T00:38:06+08:00">
-                2017-08-08
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-08-13T15:30:35+08:00">
+                2017-08-13
               </time>
             
 
@@ -377,7 +377,7 @@
 
           
           
-             <span id="/2017/08/08/ES2015-points/" class="leancloud_visitors" data-flag-title="ES2015学习（一）">
+             <span id="/2017/08/13/ES6-points-module/" class="leancloud_visitors" data-flag-title="ES6学习总结（四）">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -405,29 +405,18 @@
       
 
       
-        <p>前端发展的太快了，快到ES6,ES7出来之后，今年已经是ES8了，但是纵然前端发展很快，我们除了马不停蹄的学习新的技术之外，也要沉下心来，好好的潜心磨砺自己，本文是整理了自己学习ES6之后相关的知识要点，寄希望于书之于笔，一来自己可以更好地领悟，而来也可以留作日后翻阅查看。 <a id="more"></a></p>
-<p>ES6新增的知识点主要包括变量声明let以及const,新增类型symbol，模板字符串，语法糖实现类，箭头函数，用于异步调用的promise对象，模块化，rest参数以及参数默认值，for of循环和迭代器iterator以及Generator等等，可以看出，ES6较之于ES5还是有着很多的新增特性，接下来会分为几篇文章将其一一介绍。</p>
-<p><strong>let和const</strong></p>
-<p>在JavaScript中咱们以前主要用关键var来定义变量，ES6之后，新增了定义变量的两个关键字，分别是let和const</p>
-<p>对于变量来说，在ES5中var定义的变量会提升到作用域中所有的函数与语句前面，而ES6中let定义的变量则不会，let声明的变量会在其相应的代码块中建立一个暂时性死区，直至变量被声明。</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//var声明变量</span></div><div class="line"><span class="built_in">console</span>.log(x === <span class="literal">undefined</span>); <span class="comment">// "true"</span></div><div class="line"><span class="keyword">var</span> x = <span class="number">3</span>;</div><div class="line"><span class="comment">//let声明变量</span></div><div class="line"><span class="built_in">console</span>.log(x === <span class="literal">undefined</span>); <span class="comment">// Uncaught ReferenceError: x is not defined</span></div><div class="line"><span class="keyword">let</span> x = <span class="number">3</span>;</div></pre></td></tr></table></figure>
-<p>从上面的代码可以看出来，使用let我们可以伪造一个代码块，终于不再局限于函数作用域中，而且对于代码也会更加的规范，使用let定义变量，提倡人们先定义再使用，不然会报错。</p>
-<p>const主要作用于定义常量，而且一旦声明，初始必须赋值，并且变量值不能更改，否则会报错</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">const</span> CALA;</div><div class="line"><span class="comment">//Missing initializer in const declaration</span></div><div class="line"><span class="keyword">const</span> CALA=<span class="string">"calabash519"</span></div><div class="line">CALA=<span class="string">"hello world"</span>;</div><div class="line"><span class="comment">//Assignment to constant variable.</span></div></pre></td></tr></table></figure>
-<p><strong>symbol</strong></p>
-<p>ES6    以前，我们知道5种基本数据类型分别是Undefined，Null，Boolean，Number以及String，然后加上一种引用类型Object构成了JavaScript中所有的数据类型，但是ES6出来之后，新增了一种数据类型，名叫symbol，像它的名字表露的一样，意味着独一无二，意思是每个 Symbol类型都是独一无二的，不与其它 Symbol 重复。</p>
-<p>可以通过调用 <code>Symbol()</code> 方法将创建一个新的 Symbol 类型的值，这个值独一无二，不与任何值相等。</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> mySymbol=<span class="built_in">Symbol</span>();</div><div class="line"><span class="built_in">console</span>.log(<span class="keyword">typeof</span> mySymbol) <span class="comment">//"symbol"</span></div></pre></td></tr></table></figure>
-<p>其他类型可以被强制转换成字符串，但是Symbol 却不能，千万不要这么做，不然会报错，提示TypeError。</p>
-<p>可以使用Symbol来定义对象的属性，而且当Symbol作为属性名的时候，必须用[]来进行调用而不是点操作符。</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> obj = &#123;&#125;;</div><div class="line"><span class="keyword">var</span> mySymbol = <span class="built_in">Symbol</span>();</div><div class="line">obj[mySymbol] = <span class="string">"calabash519"</span>;</div><div class="line"><span class="built_in">console</span>.log(obj[mySymbol]); <span class="comment">//calabash519</span></div><div class="line"><span class="built_in">console</span>.log(obj.mySymbol); <span class="comment">//undefined</span></div></pre></td></tr></table></figure>
-<p>Symbol还可以使 instanceof 可扩展，在 ES6 中，<code>object instanceof constructor</code> 表达式被标准化为构造函数的一个方法：<code>constructor[Symbol.hasInstance](object)</code>，这意味着它是可扩展的。</p>
-<p><strong>模板字符串</strong></p>
-<p>字符串是JavaScript中基本类型之一，应该算是除了对象之外是使用最为频繁的类型吧，字符串中包含了例如substr，replace，indexOf,slice等等诸多方法，ES6引入了模板字符串的特性，用反引号来表示，可以表示多行字符串以及做到文本插值（利用模板占位符）。</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 以前的多行字符串我们这么写：</span></div><div class="line"><span class="built_in">console</span>.log(<span class="string">"hello world 1\n\</span></div><div class="line">hello cala");</div><div class="line"><span class="comment">// "hello world</span></div><div class="line"><span class="comment">// hello cala"</span></div><div class="line"></div><div class="line"><span class="comment">//有了模板字符串之后</span></div><div class="line"><span class="built_in">console</span>.log(<span class="string">`hello world</span></div><div class="line">string text line 2`);</div><div class="line"><span class="comment">// "hello world</span></div><div class="line"><span class="comment">// hello cala"</span></div></pre></td></tr></table></figure>
-<p>可以用${}来表示模板占位符，可以将你已经定义好的变量传进括弧中，例如：</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> name=<span class="string">"cala"</span>;</div><div class="line"><span class="keyword">var</span> age=<span class="number">22</span>;</div><div class="line"><span class="built_in">console</span>.log(<span class="string">`hello,I'am <span class="subst">$&#123;name&#125;</span>,my age is <span class="subst">$&#123;age&#125;</span>`</span>)</div><div class="line"><span class="comment">//hello,I'am cala,my age is 22</span></div></pre></td></tr></table></figure>
-<p>上述是个很简单的例子，展示了模板字符串和模板占位符的基本用法，对比与普通字符串，模板字符串可以更好地支持自动转义特殊的字符串，也可以在其内嵌套控制语句，使得代码的逻辑更加清晰。</p>
+        <p> ES6模块化之前，前端模块化之路可谓是布满沧桑，从最开始的刀耕火种，无数的脚本层叠在一起引入</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">&lt;script type=<span class="string">"text/javascript"</span> src=<span class="string">"a.js"</span>&gt;&lt;/script&gt;</div><div class="line">&lt;script type=<span class="string">"text/javascript"</span> src=<span class="string">"b.js"</span>&gt;&lt;/script&gt;</div><div class="line">&lt;script type=<span class="string">"text/javascript"</span> src=<span class="string">"c.js"</span>&gt;&lt;/script&gt;</div><div class="line">&lt;script type=<span class="string">"text/javascript"</span> src=<span class="string">"d.js"</span>&gt;&lt;/script&gt;</div></pre></td></tr></table></figure>
+<a id="more"></a>到匿名函数自执行封装代码<br><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">(function(window)&#123;</div><div class="line">    // your code here</div><div class="line"> &#125;)();</div></pre></td></tr></table></figure>
+<p>再到后来的common.js，以及后面的require.js和AMD</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// a.js</span></div><div class="line">exports.add = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line"></div><div class="line">&#125;;</div><div class="line"><span class="comment">// b.js</span></div><div class="line"><span class="keyword">var</span> add = <span class="built_in">require</span>(<span class="string">'a'</span>).add;</div><div class="line">exports.increment = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">    </div><div class="line">&#125;;</div><div class="line"><span class="comment">// c.js</span></div><div class="line"><span class="keyword">var</span> inc = <span class="built_in">require</span>(<span class="string">'b'</span>).increment;</div></pre></td></tr></table></figure>
+<p>可以看出前端模块化一直在进步，但是始终没有一致的标准，直到ES6实现模块化之后，前端的模块化之路才慢慢的变得比较统一，默认情况下，模块皆是在严格模式下运行，ES6使用import和export来实现模块化，可以导出包括外层函数，类与对象以所有定义的变量</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// a.js</span></div><div class="line"><span class="keyword">export</span> <span class="function"><span class="keyword">function</span> <span class="title">hello</span>(<span class="params"></span>) </span>&#123;</div><div class="line">	<span class="keyword">return</span> <span class="string">"hello world"</span> </div><div class="line">&#125;</div><div class="line"><span class="comment">// b.js </span></div><div class="line"><span class="keyword">import</span> &#123;hello&#125; <span class="keyword">from</span> <span class="string">"a.js"</span>;</div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">sayHello</span>(<span class="params"></span>) </span>&#123;</div><div class="line">	hello();  </div><div class="line">&#125;</div><div class="line">sayHello();</div></pre></td></tr></table></figure>
+<p>ES6模块化中import和export也可以重命名，若是有时候导出的名字跟其他的正在使用中的名字有冲突的时候，在导入的时候可以使用as来重命名（突然间想起来SQL）</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> &#123;hello <span class="keyword">as</span> cala&#125; <span class="keyword">from</span> <span class="string">"a.js"</span>;</div></pre></td></tr></table></figure>
+<p>可以用两个不一样的名字来导出相同的值，ES6中可以使用default关键字来实现默认导出，不能在语句和函数之内使用export关键字，只能在模块顶部使用</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">hello</span>(<span class="params"></span>) </span>&#123;</div><div class="line">	<span class="keyword">return</span> <span class="string">"hello world"</span> </div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">export</span> &#123;</div><div class="line">  hello <span class="keyword">as</span> foo,</div><div class="line">  hello <span class="keyword">as</span> bar</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="comment">//default</span></div><div class="line"><span class="keyword">var</span> obj=&#123;</div><div class="line">  <span class="attr">key1</span>:value1,</div><div class="line">  <span class="attr">key2</span>:value2</div><div class="line">&#125;;</div><div class="line"><span class="keyword">export</span> &#123;obj <span class="keyword">as</span> <span class="keyword">default</span>&#125;</div><div class="line"><span class="keyword">export</span> <span class="keyword">default</span>&#123;</div><div class="line">  <span class="attr">key1</span>:value1,</div><div class="line">  <span class="attr">key2</span>:value2</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>ES6模块化负责处理不同模块间的耦合关联，具体到编译时处理所有的模块依赖，将模块打包成文件传输等工作可以用打包工具webpack等来完成，目前来说，ES6模块化的标准仍然在路上，不过也已经普及，以后希望能继续发展，让前端更好的发展。</p>
 
       
     </div>
@@ -480,8 +469,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2017/07/20/function-notes/" rel="prev" title="JavaScript中函数纪要（下）">
-                JavaScript中函数纪要（下） <i class="fa fa-chevron-right"></i>
+              <a href="/2017/08/12/ES6-points-class/" rel="prev" title="ES6学习总结（三）">
+                ES6学习总结（三） <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -570,7 +559,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">13</span>
+                <span class="site-state-item-count">16</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
