@@ -92,17 +92,17 @@
 
 
 
-<meta name="description" content="不同于其他面向对象语言，ES6以前的JavaScript中中没有class类的概念，主要是通过原型的方式来实现继承，JavaScript中引入了原型链，并且将原型链用来实现继承，其核心是利用原型使得一个对象继承另一个对象的方法和属性，JavaScript中原型继承的关键是将一个实例的原型对象指向另一个实例，因此前一个实例便可以获得后一个实例原型对象的属性和方法">
+<meta name="description" content="不同于其他面向对象语言，ES6以前的JavaScript中中没有类的概念，主要是通过原型的方式来实现继承，JavaScript中引入了原型链，并且将原型链用来实现继承，其核心是利用原型使得一个对象继承另一个对象的方法和属性，JavaScript中原型继承的关键是将一个实例的原型对象指向另一个实例，因此前一个实例便可以获得后一个实例原型对象的属性和方法">
 <meta name="keywords">
 <meta property="og:type" content="article">
 <meta property="og:title" content="ES6学习总结（三）">
 <meta property="og:url" content="http://yoursite.com/2017/08/12/ES6-points-class/index.html">
 <meta property="og:site_name" content="calabash519">
-<meta property="og:description" content="不同于其他面向对象语言，ES6以前的JavaScript中中没有class类的概念，主要是通过原型的方式来实现继承，JavaScript中引入了原型链，并且将原型链用来实现继承，其核心是利用原型使得一个对象继承另一个对象的方法和属性，JavaScript中原型继承的关键是将一个实例的原型对象指向另一个实例，因此前一个实例便可以获得后一个实例原型对象的属性和方法">
-<meta property="og:updated_time" content="2017-08-13T09:24:45.297Z">
+<meta property="og:description" content="不同于其他面向对象语言，ES6以前的JavaScript中中没有类的概念，主要是通过原型的方式来实现继承，JavaScript中引入了原型链，并且将原型链用来实现继承，其核心是利用原型使得一个对象继承另一个对象的方法和属性，JavaScript中原型继承的关键是将一个实例的原型对象指向另一个实例，因此前一个实例便可以获得后一个实例原型对象的属性和方法">
+<meta property="og:updated_time" content="2017-08-13T14:02:53.311Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="ES6学习总结（三）">
-<meta name="twitter:description" content="不同于其他面向对象语言，ES6以前的JavaScript中中没有class类的概念，主要是通过原型的方式来实现继承，JavaScript中引入了原型链，并且将原型链用来实现继承，其核心是利用原型使得一个对象继承另一个对象的方法和属性，JavaScript中原型继承的关键是将一个实例的原型对象指向另一个实例，因此前一个实例便可以获得后一个实例原型对象的属性和方法">
+<meta name="twitter:description" content="不同于其他面向对象语言，ES6以前的JavaScript中中没有类的概念，主要是通过原型的方式来实现继承，JavaScript中引入了原型链，并且将原型链用来实现继承，其核心是利用原型使得一个对象继承另一个对象的方法和属性，JavaScript中原型继承的关键是将一个实例的原型对象指向另一个实例，因此前一个实例便可以获得后一个实例原型对象的属性和方法">
 
 
 
@@ -405,10 +405,10 @@
       
 
       
-        <p> 不同于其他面向对象语言，ES6以前的JavaScript中中没有class类的概念，主要是通过原型的方式来实现继承，JavaScript中引入了原型链，并且将原型链用来实现继承，其核心是利用原型使得一个对象继承另一个对象的方法和属性，JavaScript中原型继承的关键是将一个实例的原型对象指向另一个实例，因此前一个实例便可以获得后一个实例原型对象的属性和方法<a id="more"></a>，例如：</p>
+        <p> 不同于其他面向对象语言，ES6以前的JavaScript中中没有类的概念，主要是通过原型的方式来实现继承，JavaScript中引入了原型链，并且将原型链用来实现继承，其核心是利用原型使得一个对象继承另一个对象的方法和属性，JavaScript中原型继承的关键是将一个实例的原型对象指向另一个实例，因此前一个实例便可以获得后一个实例原型对象的属性和方法<a id="more"></a>，例如：</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">Father</span>(<span class="params"></span>)</span>&#123;</div><div class="line">  <span class="keyword">this</span>.age=<span class="number">30</span>;</div><div class="line">&#125;</div><div class="line">Father.prototype.work=<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">  <span class="keyword">return</span> <span class="string">"hard work"</span>;</div><div class="line">&#125;</div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">Child</span>(<span class="params"></span>)</span>&#123;</div><div class="line">  <span class="keyword">this</span>.age=<span class="number">10</span>;</div><div class="line">&#125;</div><div class="line"><span class="comment">//将child的原型指向Father构造函数的实例</span></div><div class="line">Child.prototype=<span class="keyword">new</span> Father();</div><div class="line"></div><div class="line">Child.prototype.play=<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">  <span class="keyword">return</span> <span class="string">"play"</span>;				</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">var</span> child=<span class="keyword">new</span> Child();</div><div class="line"></div><div class="line"><span class="built_in">console</span>.log(child.play()) <span class="comment">// play</span></div><div class="line"><span class="built_in">console</span>.log(child.work()) <span class="comment">// work</span></div></pre></td></tr></table></figure>
-<p>看完了上面的JavaScript典型的原型继承，要回到ES6上面了，ES6中引入了类class 的概念，实际上是语法糖，很多都与构造函数相关，先看个例子：</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// var Man =class&#123; 这么写也是可以的</span></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Man</span></span>&#123;</div><div class="line">  <span class="keyword">constructor</span>(age) &#123;</div><div class="line">    <span class="keyword">this</span>.age=age;</div><div class="line">  &#125;</div><div class="line">  grow()&#123;</div><div class="line">    <span class="keyword">return</span> <span class="keyword">this</span>.age+<span class="number">1</span>;</div><div class="line">  &#125;</div><div class="line">&#125;</div><div class="line"><span class="keyword">var</span> cala=<span class="keyword">new</span> Man(<span class="number">22</span>);</div><div class="line"><span class="built_in">console</span>.log(cala.grow()); <span class="comment">// 23</span></div></pre></td></tr></table></figure>
+<p>看完了上面的JavaScript典型的原型继承，要回到ES6上面了，ES6中引入了类的概念，class实际上是语法糖，很多都与构造函数,原型对象相关，先看个例子：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// var Man = class&#123;&#125; </span></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Man</span></span>&#123;</div><div class="line">  <span class="keyword">constructor</span>(age) &#123;</div><div class="line">    <span class="keyword">this</span>.age=age;</div><div class="line">  &#125;</div><div class="line">  grow()&#123;</div><div class="line">    <span class="keyword">return</span> <span class="keyword">this</span>.age+<span class="number">1</span>;</div><div class="line">  &#125;</div><div class="line">&#125;</div><div class="line"><span class="keyword">var</span> cala=<span class="keyword">new</span> Man(<span class="number">22</span>);</div><div class="line"><span class="built_in">console</span>.log(cala.grow()); <span class="comment">// 23</span></div></pre></td></tr></table></figure>
 <p>上面是一个简单的ES6写class的例子，可以看到的是，用class关键字定义类，里面的constructor指的是构造函数，在构造函数中定义私有属性，然后接着定义了一个grow方法，最后通过new关键字来实例化一个对象</p>
 <p>在JavaScript中定义类和定义函数很相似，不过两者还是有些不同，函数声明可以提升，但是类声明则不行</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> cala=<span class="keyword">new</span> Man();</div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Man</span></span>&#123;&#125; <span class="comment">// Man is not defined</span></div></pre></td></tr></table></figure>
@@ -565,7 +565,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">16</span>
+                <span class="site-state-item-count">18</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>

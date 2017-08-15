@@ -92,17 +92,17 @@
 
 
 
-<meta name="description" content="关于ES6的学习总结，前两天写了第一篇，主要是讲关于变量声明关键字let和const，新增类型Symbol以及模板字符串，今天准备写第二篇，主要是关于ES6里面的函数，ES6新增了箭头函数，Rest参数以及参数默认值。">
+<meta name="description" content="关于ES6的学习总结，前两天写了第一篇，主要是关于变量声明关键字let和const，新增类型Symbol以及模板字符串，今天准备写第二篇，ES6里面的函数部分，ES6新增了箭头函数，Rest参数以及参数默认值。">
 <meta name="keywords">
 <meta property="og:type" content="article">
 <meta property="og:title" content="ES6学习总结（二）">
 <meta property="og:url" content="http://yoursite.com/2017/08/11/ES6-points-function/index.html">
 <meta property="og:site_name" content="calabash519">
-<meta property="og:description" content="关于ES6的学习总结，前两天写了第一篇，主要是讲关于变量声明关键字let和const，新增类型Symbol以及模板字符串，今天准备写第二篇，主要是关于ES6里面的函数，ES6新增了箭头函数，Rest参数以及参数默认值。">
-<meta property="og:updated_time" content="2017-08-13T07:30:43.763Z">
+<meta property="og:description" content="关于ES6的学习总结，前两天写了第一篇，主要是关于变量声明关键字let和const，新增类型Symbol以及模板字符串，今天准备写第二篇，ES6里面的函数部分，ES6新增了箭头函数，Rest参数以及参数默认值。">
+<meta property="og:updated_time" content="2017-08-13T13:58:52.047Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="ES6学习总结（二）">
-<meta name="twitter:description" content="关于ES6的学习总结，前两天写了第一篇，主要是讲关于变量声明关键字let和const，新增类型Symbol以及模板字符串，今天准备写第二篇，主要是关于ES6里面的函数，ES6新增了箭头函数，Rest参数以及参数默认值。">
+<meta name="twitter:description" content="关于ES6的学习总结，前两天写了第一篇，主要是关于变量声明关键字let和const，新增类型Symbol以及模板字符串，今天准备写第二篇，ES6里面的函数部分，ES6新增了箭头函数，Rest参数以及参数默认值。">
 
 
 
@@ -405,21 +405,21 @@
       
 
       
-        <p>关于ES6的学习总结，前两天写了第一篇，主要是讲关于变量声明关键字let和const，新增类型Symbol以及模板字符串，今天准备写第二篇，主要是关于ES6里面的函数，ES6新增了箭头函数，Rest参数以及参数默认值。<a id="more"></a></p>
+        <p>关于ES6的学习总结，前两天写了第一篇，主要是关于变量声明关键字let和const，新增类型Symbol以及模板字符串，今天准备写第二篇，ES6里面的函数部分，ES6新增了箭头函数，Rest参数以及参数默认值。<a id="more"></a></p>
 <p><strong>箭头函数</strong></p>
-<p>关于箭头函数，它就是由一个箭头来定义的，例如：</p>
+<p>关于箭头函数，之所以这么称呼，是因为它就是由一个箭头来定义的，例如：</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//ES5</span></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">foo</span>(<span class="params">param</span>)</span>&#123;</div><div class="line">    <span class="keyword">return</span> param*param;</div><div class="line">&#125;</div><div class="line"><span class="comment">//ES6 箭头函数</span></div><div class="line"><span class="keyword">var</span> foo= <span class="function"><span class="params">param</span> =&gt;</span> param*param;</div></pre></td></tr></table></figure>
 <p>上面的代码简单比较了ES5中普通函数与ES6箭头函数的的写法，很明显的可以看出，箭头函数显得更加的简便，箭头函数中，有一些需要注意的地方：</p>
-<p>返回值必须明确，并且加上在大括弧内必须加上return关键字，若是省略大括弧，则可以不要return</p>
+<p>返回值必须明确，并且在大括弧内必须加上return关键字，若是省略大括弧，则可以省略return</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//返回值的写法，下面两种是一样的</span></div><div class="line">() =&gt; <span class="string">"hello world"</span>;</div><div class="line"><span class="function"><span class="params">()</span> =&gt;</span> &#123; <span class="keyword">return</span> <span class="string">"hello word"</span>; &#125;</div></pre></td></tr></table></figure>
-<p>当参数参数的数目不止一个或者没有的时候，需要用小括弧（）包裹</p>
+<p>当参数的数目不止一个或者没有的时候，需要用小括弧（）包裹</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//没有参数或者多个参数需要加小括号 </span></div><div class="line"><span class="keyword">var</span> foo1 = <span class="function"><span class="params">()</span> =&gt;</span> <span class="string">"hello world"</span>;</div><div class="line"><span class="keyword">var</span> foo1 = <span class="function"><span class="params">()</span> =&gt;</span> &#123; <span class="keyword">return</span> <span class="string">"hello word"</span>; &#125;</div><div class="line"><span class="keyword">var</span> foo2 = <span class="function">(<span class="params">param1,param2</span>) =&gt;</span> param1*param2;</div></pre></td></tr></table></figure>
 <p>当返回的是一个对象的时候，需要注意大括弧外面加上（）</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//返回对象需要函数体外面要加小括号</span></div><div class="line"><span class="keyword">var</span> foo3 = <span class="function"><span class="params">param</span> =&gt;</span> (&#123;<span class="attr">key</span>: value&#125;)</div></pre></td></tr></table></figure>
 <p>箭头函数中this的使用跟普通函数也不一样，在JavaScript的普通函数中，都会有一个自己的this值，主要分为：</p>
 <ol>
-<li>函数作为全局函数，this指向全局对象</li>
-<li>函数作为对象中的方法，this指向该对象</li>
+<li>函数作为全局函数被调用时，this指向全局对象</li>
+<li>函数作为对象中的方法被调用时，this指向该对象</li>
 <li>函数作为构造函数的时候，this指向构造函数new出来的新对象</li>
 <li>还可以通过call，apply，bind改变this的指向</li>
 </ol>
@@ -584,7 +584,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">16</span>
+                <span class="site-state-item-count">18</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
