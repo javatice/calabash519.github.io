@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2017-08-15T15:52:45.448Z</updated>
+  <updated>2017-09-02T13:04:03.305Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -17,10 +17,10 @@
   
   <entry>
     <title>ES6学习总结（五）</title>
-    <link href="http://yoursite.com/2017/08/15/obj-property-copy/"/>
-    <id>http://yoursite.com/2017/08/15/obj-property-copy/</id>
-    <published>2017-08-15T11:04:43.000Z</published>
-    <updated>2017-08-15T15:52:45.448Z</updated>
+    <link href="http://yoursite.com/2017/08/28/obj-property-copy/"/>
+    <id>http://yoursite.com/2017/08/28/obj-property-copy/</id>
+    <published>2017-08-28T11:04:43.000Z</published>
+    <updated>2017-09-02T13:04:03.305Z</updated>
     
     <content type="html"><![CDATA[<p>与其说是对象合并，还不如说是JavaScript中对象属性的复制和转移，将多个对象中的属性合并到一个对象中</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> person = &#123;</div><div class="line">	<span class="attr">name</span> : <span class="string">'John'</span>,</div><div class="line">	<span class="attr">age</span>  : <span class="number">24</span></div><div class="line">&#125;,</div><div class="line">location = &#123;</div><div class="line">	<span class="attr">address</span> : <span class="string">'Location'</span>,</div><div class="line">	<span class="attr">city</span> : <span class="string">'NewYork'</span></div><div class="line">&#125; ;</div></pre></td></tr></table></figure>
@@ -38,17 +38,17 @@
     
     </summary>
     
-      <category term="JavaScript" scheme="http://yoursite.com/categories/JavaScript/"/>
+      <category term="ECMAscript6" scheme="http://yoursite.com/categories/ECMAscript6/"/>
     
     
   </entry>
   
   <entry>
     <title>ES6学习总结（四）</title>
-    <link href="http://yoursite.com/2017/08/13/ES6-points-module/"/>
-    <id>http://yoursite.com/2017/08/13/ES6-points-module/</id>
-    <published>2017-08-13T07:30:35.000Z</published>
-    <updated>2017-08-13T14:04:00.845Z</updated>
+    <link href="http://yoursite.com/2017/08/23/ES6-points-module/"/>
+    <id>http://yoursite.com/2017/08/23/ES6-points-module/</id>
+    <published>2017-08-23T07:30:35.000Z</published>
+    <updated>2017-09-02T13:03:14.970Z</updated>
     
     <content type="html"><![CDATA[<p> ES6模块化之前，前端模块化之路可谓是布满沧桑，从最开始的刀耕火种，无数的脚本层叠在一起引入</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">&lt;script type=<span class="string">"text/javascript"</span> src=<span class="string">"a.js"</span>&gt;&lt;/script&gt;</div><div class="line">&lt;script type=<span class="string">"text/javascript"</span> src=<span class="string">"b.js"</span>&gt;&lt;/script&gt;</div><div class="line">&lt;script type=<span class="string">"text/javascript"</span> src=<span class="string">"c.js"</span>&gt;&lt;/script&gt;</div><div class="line">&lt;script type=<span class="string">"text/javascript"</span> src=<span class="string">"d.js"</span>&gt;&lt;/script&gt;</div></pre></td></tr></table></figure>
@@ -78,10 +78,10 @@
   
   <entry>
     <title>ES6学习总结（三）</title>
-    <link href="http://yoursite.com/2017/08/12/ES6-points-class/"/>
-    <id>http://yoursite.com/2017/08/12/ES6-points-class/</id>
-    <published>2017-08-11T18:28:08.000Z</published>
-    <updated>2017-08-13T14:02:53.311Z</updated>
+    <link href="http://yoursite.com/2017/08/19/ES6-points-class/"/>
+    <id>http://yoursite.com/2017/08/19/ES6-points-class/</id>
+    <published>2017-08-18T18:28:08.000Z</published>
+    <updated>2017-09-02T13:02:16.207Z</updated>
     
     <content type="html"><![CDATA[<p> 不同于其他面向对象语言，ES6以前的JavaScript中中没有类的概念，主要是通过原型的方式来实现继承，JavaScript中引入了原型链，并且将原型链用来实现继承，其核心是利用原型使得一个对象继承另一个对象的方法和属性，JavaScript中原型继承的关键是将一个实例的原型对象指向另一个实例，因此前一个实例便可以获得后一个实例原型对象的属性和方法<a id="more"></a>，例如：</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">Father</span>(<span class="params"></span>)</span>&#123;</div><div class="line">  <span class="keyword">this</span>.age=<span class="number">30</span>;</div><div class="line">&#125;</div><div class="line">Father.prototype.work=<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">  <span class="keyword">return</span> <span class="string">"hard work"</span>;</div><div class="line">&#125;</div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">Child</span>(<span class="params"></span>)</span>&#123;</div><div class="line">  <span class="keyword">this</span>.age=<span class="number">10</span>;</div><div class="line">&#125;</div><div class="line"><span class="comment">//将child的原型指向Father构造函数的实例</span></div><div class="line">Child.prototype=<span class="keyword">new</span> Father();</div><div class="line"></div><div class="line">Child.prototype.play=<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">  <span class="keyword">return</span> <span class="string">"play"</span>;				</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">var</span> child=<span class="keyword">new</span> Child();</div><div class="line"></div><div class="line"><span class="built_in">console</span>.log(child.play()) <span class="comment">// play</span></div><div class="line"><span class="built_in">console</span>.log(child.work()) <span class="comment">// work</span></div></pre></td></tr></table></figure>
@@ -112,10 +112,10 @@
   
   <entry>
     <title>ES6学习总结（二）</title>
-    <link href="http://yoursite.com/2017/08/11/ES6-points-function/"/>
-    <id>http://yoursite.com/2017/08/11/ES6-points-function/</id>
-    <published>2017-08-10T16:38:06.000Z</published>
-    <updated>2017-08-13T13:58:52.047Z</updated>
+    <link href="http://yoursite.com/2017/08/16/ES6-points-function/"/>
+    <id>http://yoursite.com/2017/08/16/ES6-points-function/</id>
+    <published>2017-08-15T16:38:06.000Z</published>
+    <updated>2017-09-02T13:02:24.888Z</updated>
     
     <content type="html"><![CDATA[<p>关于ES6的学习总结，前两天写了第一篇，主要是关于变量声明关键字let和const，新增类型Symbol以及模板字符串，今天准备写第二篇，ES6里面的函数部分，ES6新增了箭头函数，Rest参数以及参数默认值。<a id="more"></a></p>
 <p><strong>箭头函数</strong></p>
@@ -165,10 +165,10 @@
   
   <entry>
     <title>ES6学习总结（一）</title>
-    <link href="http://yoursite.com/2017/08/08/ES6-points-let/"/>
-    <id>http://yoursite.com/2017/08/08/ES6-points-let/</id>
-    <published>2017-08-07T16:38:06.000Z</published>
-    <updated>2017-08-13T07:33:04.418Z</updated>
+    <link href="http://yoursite.com/2017/08/12/ES6-points-let/"/>
+    <id>http://yoursite.com/2017/08/12/ES6-points-let/</id>
+    <published>2017-08-11T16:38:06.000Z</published>
+    <updated>2017-09-02T13:02:39.711Z</updated>
     
     <content type="html"><![CDATA[<p>前端发展的太快了，快到ES6,ES7出来之后，今年已经是ES8了，但是纵然前端发展很快，我们除了马不停蹄的学习新的技术之外，也要沉下心来，好好的潜心磨砺自己，本文是整理了自己学习ES6之后相关的知识要点，寄希望于书之于笔，一来自己可以更好地领悟，而来也可以留作日后翻阅查看。 <a id="more"></a></p>
 <p>ES6新增的知识点主要包括变量声明let以及const,新增类型symbol，模板字符串，语法糖实现类，用于异步调用的promise对象，模块化，箭头函数，rest参数以及参数默认值，Set和Map集合，for of循环和迭代器iterator以及Generator等等，可以看出，ES6较之于ES5还是有着很多的新增特性，接下来会分为几篇文章将其一一介绍。</p>
